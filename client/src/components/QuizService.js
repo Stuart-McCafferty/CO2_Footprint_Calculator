@@ -1,7 +1,8 @@
-import React from 'react'
+const baseURL = 'http://localhost:9000/api/users';
 
-export const QuizService = () => {
-  return (
-    <div>QuizService</div>
-  )
+const QuizService =  {
+  getUsers() {
+    return fetch(baseURL)
+      .then(res => res.json());
+  }
 }
