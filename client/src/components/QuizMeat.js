@@ -3,7 +3,7 @@ import React from 'react'
 const QuizMeat = () => {
   return (
       <div>
-          <h2></h2>
+          <h2>What products do you eat in an average week?</h2>
           <form>
               <button>Cheese</button>
               <div>
