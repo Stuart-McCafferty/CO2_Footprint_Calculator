@@ -84,6 +84,9 @@ const QuizMeat = () => {
                   <button>+</button>
                   <button>-</button>
               </div>
+              <div>
+                  <button>Submit</button>
+              </div>
  
           </form>
       </div>
