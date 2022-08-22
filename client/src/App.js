@@ -13,7 +13,7 @@ function App(){
   return (
     <>    
     <div>
-      <h1>Test</h1>
+      <h1>CO2 Footprint Calculator</h1>
       <QuizContainer/>
     </div>
     </>
