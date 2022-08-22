@@ -9,7 +9,7 @@ import { Survey } from 'survey-react-ui';
 StylesManager.applyTheme("modern");
 
 
-const surveyJson = {
+const surveyJson = {  
   pages: [{
     elements: [{
       type: "html",
@@ -41,110 +41,91 @@ const surveyJson = {
       ],
       isRequired: true
     }]
+    },   {
+      type: "matrixdynamic",
+      name: "frameworksRateMatrix",
+      minRowCount: 4,
+      maxRowCount: 4,
+      valueName: "frameworksRate",
+      title: "Please tells us about JavaScript frameworks you are using (Matrix Dynamic)",
+      columns: [
+        {
+          name: "framework",
+          title: "Framework",
+          cellType: "text",
+          readOnly: true
+        }, {
+          name: "using",
+          title: "Do you use it?",
+          isRequired: true,
+          choices: [
+            "Yes", "No"
+          ],
+          cellType: "radiogroup"
+        }, {
+          name: "experience",
+          title: "How long do you use it?",
+          cellType: "dropdown",
+          visibleIf: "{row.using} = 'Yes'",
+          isRequired: true,
+          choices: [
+            {
+              value: 5,
+              text: "3-5 years"
+            }, {
+              value: 2,
+              text: "1-2 years"
+            }, {
+              value: 1,
+              text: "less then a year"
+            }
+          ]
+        }
+      ]
     }, {
-      elements: [{
-        type: "checkbox",
-      name: "Veggie",
-      title: "Do you eat?",
-      visibleIf: "{Food} = 2",
-      isRequired: true,
-      choices: [
-        "Cheese", "Milk", "Eggs"
-      ],
-      colCount: 0
+      type: "paneldynamic",
+      name: "frameworksRatePanel",
+      minPanelCount: 4,
+      maxPanelCount: 4,
+      valueName: "frameworksRate",
+      title: "Please tells us about JavaScript frameworks you are using (Panel Dynamic)",
+      templateElements: [
+        {
+          name: "framework",
+          title: "Framework",
+          type: "text",
+          readOnly: true
+        }, {
+          name: "using",
+          title: "Do you use it?",
+          type: "radiogroup",
+          colCount: 0,
+          startWithNewLine: false,
+          isRequired: true,
+          choices: [
+            "Yes", "No"
+          ],
+          cellType: "radiogroup"
+        }, {
+          name: "experience",
+          title: "How long do you use it?",
+          type: "dropdown",
+          visibleIf: "{panel.using} = 'Yes'",
+          isRequired: true,
+          startWithNewLine: false,
+          choices: [
+            {
+              value: 5,
+              text: "3-5 years"
+            }, {
+              value: 2,
+              text: "1-2 years"
+            }, {
+              value: 1,
+              text: "less then a year"
+            }
+          ]
     },
-    {
-      type: "dropdown",
-      name: "cheeseCount",
-      title: "How many portions of cheese do you have per week?",
-      visibleIf: "{Veggie} = 'Cheese'",
-      isRequired: true,
-      choices: [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      type: "dropdown",
-      name: "milkCount",
-      title: "How many portions do MILK MILK have?",
-      visibleIf: "{Veggie} = 'Milk'",
-      isRequired: true,
-      choices: [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      type: "dropdown",
-      name: "eggCount",
-      title: "How many portions EGGS EGGS you have?",
-      visibleIf: "{Veggie} = 'Eggs'",
-      isRequired: true,
-      choices: [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    ]
-    },
-      
-
-
-  // {
-  //   elements: [{
-  //     name: "Veggie",
-  //     isRequired: true,
-  //     title: "What products?",
-  //     type: "checkbox",
-  //     visibleIf: "{Food} = 2", 
-  //     choices: [
-  //       // 'Cheese', 'Milk', 'Eggs'
-  //       { value: 1, text: "Cheese" },
-  //       { value: 2, text: "Milk" },
-  //       { value: 3, text: "Eggs " },
-  //     ],
-  //   }, 
-  //   {
-  //     type: "dropdown",
-  //     name: "CheeseCount",
-  //     title: "How many portions a week do you eat of Cheese?",
-  //     visibleIf: "{Veggie.length} = 1",
-  //     isRequired: true,
-  //     choices: [
-  //       1,
-  //       2,
-  //       3,
-  //       4,
-  //       5
-  //     ]
-  //   },   
-  //     {
-  //     type: "dropdown",
-  //     name: "satisfaction",
-  //     visibleIf: "{Veggie} = 'Milk'",
-  //     title: "How many portions a week do you eat of Milk?",
-  //     choicesFromQuestion: "Veggie",
-  //     choicesFromQuestionMode: "selected"
-  //   },     {
-  //     type: "rating",
-  //     name: "satisfaction",
-  //     visibleIf: "{Veggie} = 'Eggs'",
-  //     title: "How many portions a week do you eat of Eggs?",
-  //     choicesFromQuestion: "Veggie",
-  //     choicesFromQuestionMode: "selected"
-  //   }
-  // ],
-  // }, 
   {
     elements: [{
       name: "Pesc",
@@ -176,7 +157,6 @@ const surveyJson = {
       ],
       isRequired: true
     }],
-    // visibleIf: "{} >= 4"
   }, {
     elements: [{
       name: "Travel",
@@ -202,7 +182,9 @@ const surveyJson = {
   startSurveyText: "Take the Survey",
   completedHtml: "Thank you for your feedback!",
   showPreviewBeforeComplete: "showAnsweredQuestions"
-};
+}],
+}
+
 
 function QuizContainer() {
   // useRef enables the Model object to persist between state changes
