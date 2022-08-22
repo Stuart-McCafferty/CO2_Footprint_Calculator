@@ -4,6 +4,7 @@ import { useCallback, useState, useRef } from 'react';
 import 'survey-core/modern.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
+import { ResultsPage } from '../components/ResultsPage';
 
 
 StylesManager.applyTheme("modern");
@@ -349,7 +350,7 @@ const surveyJson = {
   
   ],
   
-  showQuestionNumbers: "off",
+  // showQuestionNumbers: "off",
   pageNextText: "Next",
   completeText: "Submit",
   showPrevButton: false,
@@ -380,12 +381,12 @@ function QuizContainer() {
     <>
       <Survey model={survey} id="surveyContainer" />
       {isSurveyCompleted && (
-        <>
-          <p>Result JSON:</p>
-          <code style={{ whiteSpace: 'pre' }}>
+        <div>
+          <ResultsPage surveyResults={surveyResults}/>
+            <code style={{ whiteSpace: 'pre' }}>
             {surveyResults}
           </code>
-        </>
+        </div>
         )
       }
     </>
