@@ -1,10 +1,12 @@
 import { useCallback, useState, useRef } from 'react';
+
 // import './App.css'
 
 import 'survey-core/modern.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { ResultsPage } from '../components/ResultsPage';
+
 
 
 StylesManager.applyTheme("modern");
@@ -380,6 +382,7 @@ function QuizContainer() {
 
   return (
     <>
+    
       <Survey model={survey} id="surveyContainer" />
       {isSurveyCompleted && (
         <div>
