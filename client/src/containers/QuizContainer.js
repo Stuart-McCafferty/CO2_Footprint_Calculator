@@ -8,7 +8,6 @@ import { Survey } from 'survey-react-ui';
 
 StylesManager.applyTheme("modern");
 
-
 const surveyJson = {  
   pages: [{
     elements: [{
@@ -242,6 +241,7 @@ const surveyJson = {
     
     // CONTINENTS 
     {
+
     elements: [{
       name: "UK",
       title: "Have you tavelled within the UK?",
