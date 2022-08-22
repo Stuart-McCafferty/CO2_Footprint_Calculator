@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import { QuizContainer } from './containers/QuizContainer';
+import React, {useState, useEffect} from "react";
+import QuizContainer from "./containers/QuizContainer";
 
-function App() {
 
+
+function App(){
   const [values, setValues] = useState([]);
 
   useEffect(() => {
@@ -14,12 +14,13 @@ function App() {
 
   return (
     <>    
-    <div className="App">
+    <div>
     <QuizContainer/>
     </div>
     </>
-);    
+    );  
 
-}
+};
+  
 
 export default App;
