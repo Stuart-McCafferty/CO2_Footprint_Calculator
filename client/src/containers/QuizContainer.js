@@ -8,7 +8,8 @@ import { Survey } from 'survey-react-ui';
 
 StylesManager.applyTheme("modern");
 
-const surveyJson = {  
+const surveyJson = { 
+  showProgressBar: "top", 
   pages: [{
     elements: [{
       type: "html",
@@ -374,7 +375,7 @@ function QuizContainer() {
   survey.onComplete.add(displayResults);
 
   // surveyJson.showProgressBar = 'bottom';
-// ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));
+  // ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));
 
   return (
     <>
