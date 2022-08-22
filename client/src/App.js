@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react";
 import QuizContainer from "./containers/QuizContainer";
 
-
-
 function App(){
   const [values, setValues] = useState([]);
 
@@ -15,12 +13,12 @@ function App(){
   return (
     <>    
     <div>
-    <QuizContainer/>
+      <h1>Test</h1>
+      <QuizContainer/>
     </div>
     </>
     );  
 
 };
-  
 
 export default App;
