@@ -41,43 +41,110 @@ const surveyJson = {
       ],
       isRequired: true
     }]
-  },{
-    elements: [{
+    }, {
+      elements: [{
+        type: "checkbox",
       name: "Veggie",
+      title: "Do you eat?",
+      visibleIf: "{Food} = 2",
       isRequired: true,
-      title: "What products?",
-      type: "checkbox",
-      visibleIf: "{Food} = 2", 
       choices: [
-        { value: 1, text: "Cheese" },
-        { value: 2, text: "Milk" },
-        { value: 3, text: "Eggs " },
+        "Cheese", "Milk", "Eggs"
       ],
-    },     {
-      type: "rating",
-      name: "satisfaction",
-      visibleIf: "{Veggie.choices.value} = 1",
-      title: "How many portions a week do you eat of Cheese?",
-      choicesFromQuestion: "Veggie",
-      choicesFromQuestionMode: "selected"
-    },   
-      {
-      type: "rating",
-      name: "satisfaction",
-      visibleIf: "{Veggie.choices.value} = 2",
-      title: "How many portions a week do you eat of Milk?",
-      choicesFromQuestion: "Veggie",
-      choicesFromQuestionMode: "selected"
-    },     {
-      type: "rating",
-      name: "satisfaction",
-      visibleIf: "{Veggie.choices.value} = 3",
-      title: "How many portions a week do you eat of Eggs?",
-      choicesFromQuestion: "Veggie",
-      choicesFromQuestionMode: "selected"
-    }
-  ],
-  }, 
+      colCount: 0
+    },
+    {
+      type: "dropdown",
+      name: "cheeseCount",
+      title: "How many portions of cheese do you have per week?",
+      visibleIf: "{Veggie} = 'Cheese'",
+      isRequired: true,
+      choices: [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      type: "dropdown",
+      name: "milkCount",
+      title: "How many portions do MILK MILK have?",
+      visibleIf: "{Veggie} = 'Milk'",
+      isRequired: true,
+      choices: [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      type: "dropdown",
+      name: "eggCount",
+      title: "How many portions EGGS EGGS you have?",
+      visibleIf: "{Veggie} = 'Eggs'",
+      isRequired: true,
+      choices: [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    ]
+    },
+      
+
+
+  // {
+  //   elements: [{
+  //     name: "Veggie",
+  //     isRequired: true,
+  //     title: "What products?",
+  //     type: "checkbox",
+  //     visibleIf: "{Food} = 2", 
+  //     choices: [
+  //       // 'Cheese', 'Milk', 'Eggs'
+  //       { value: 1, text: "Cheese" },
+  //       { value: 2, text: "Milk" },
+  //       { value: 3, text: "Eggs " },
+  //     ],
+  //   }, 
+  //   {
+  //     type: "dropdown",
+  //     name: "CheeseCount",
+  //     title: "How many portions a week do you eat of Cheese?",
+  //     visibleIf: "{Veggie.length} = 1",
+  //     isRequired: true,
+  //     choices: [
+  //       1,
+  //       2,
+  //       3,
+  //       4,
+  //       5
+  //     ]
+  //   },   
+  //     {
+  //     type: "dropdown",
+  //     name: "satisfaction",
+  //     visibleIf: "{Veggie} = 'Milk'",
+  //     title: "How many portions a week do you eat of Milk?",
+  //     choicesFromQuestion: "Veggie",
+  //     choicesFromQuestionMode: "selected"
+  //   },     {
+  //     type: "rating",
+  //     name: "satisfaction",
+  //     visibleIf: "{Veggie} = 'Eggs'",
+  //     title: "How many portions a week do you eat of Eggs?",
+  //     choicesFromQuestion: "Veggie",
+  //     choicesFromQuestionMode: "selected"
+  //   }
+  // ],
+  // }, 
   {
     elements: [{
       name: "Pesc",
