@@ -22,4 +22,4 @@ StylesManager.applyTheme("modern");
 )};
 
 
-export default App;
+export default ;
