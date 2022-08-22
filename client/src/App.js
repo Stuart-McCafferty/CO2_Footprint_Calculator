@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from "react";
+import UserTable from "./components/UserTable";
 import QuizContainer from "./containers/QuizContainer";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import NavBar from "./components/NavBar";
+
 
 function App(){
   const [values, setValues] = useState([]);
@@ -11,12 +15,15 @@ function App(){
   // })
 
   return (
-    <>    
-    <div>
-      <h1>CO2 Footprint Calculator</h1>
-      <QuizContainer/>
-    </div>
-    </>
+    <Router>
+      {/* <NavBar/> */}
+        <Routes>
+            {/* <Route path="/" element={<Home/>}/> */}
+            <Route path="/quiz" element={<QuizContainer/>}/>
+            <Route path="/table" element={<UserTable/>}/>
+        </Routes>
+    </Router>
+    
     );  
 
 };

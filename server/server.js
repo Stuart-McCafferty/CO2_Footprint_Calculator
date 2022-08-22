@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors());
+
+app.use(express.json());
+const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
 
@@ -40,10 +43,16 @@ const values = [
 
 ];
 
-
 const valuesRouter = createRouter(values);
 app.use('/api/values', valuesRouter);
 
+MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
+.then((client) => {
+    const db = client.db('co2_app_users');
+    const users = db.collection('app_user');
+    const usersRouter = createRouter(users);
+    app.use('/api/users', usersRouter);
+});
 
 app.listen(9000, function () {
   console.log('App is running on port 9000');
