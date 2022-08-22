@@ -1,34 +1,47 @@
-import React from 'react'
+// import React, {useState} from 'react'
 
-export const QuizVeggie = () => {
-    return (
-        <div>
-            <h2>What products do you eat in an average week?</h2>
-            <form>
-                <button>Cheese</button>
-                <div>
-                    <p>How many portions a week?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+// export const QuizVeggie = () => {
 
-                <button>Eggs</button>
-                <div>
-                    <p>How many portions a week?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+//     const [number, setNumber] = useState(0)
 
-                <button>Milk</button>
-                <div>
-                    <p>How many portions a week?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-            </form>
-        </div>
-    )
-    }
+//     const handleInc = () => {
+//         let newNum = number + 1; 
+//         setNumber(newNum);
+//         }
+    
+//     const handleDec = () => {
+//         let newNum = number - 1; 
+//         setNumber(newNum);
+//         }
+
+//     return (
+//         <div>
+//             <h2>What products do you eat in an average week?</h2>
+//             <form>
+//                 <button>Cheese</button>
+//                 <div>
+//                     <p>How many portions a week?</p>
+//                     <p>{number}</p>
+//                     <button onClick={handleInc}>+</button>
+//                     <button onClick={handleDec}>-</button>
+//                 </div>
+    
+//                 <button>Eggs</button>
+//                 <div>
+//                     <p>How many portions a week?</p>
+//                     <p>0</p>
+//                     <button onClick={handleInc}>+</button>
+//                     <button onClick={handleDec}>-</button>
+//                 </div>
+    
+//                 <button>Milk</button>
+//                 <div>
+//                     <p>How many portions a week?</p>
+//                     <p>0</p>
+//                     <button onClick={handleInc}>+</button>
+//                     <button onClick={handleDec}>-</button>
+//                 </div>
+//             </form>
+//         </div>
+//     )
+//     }

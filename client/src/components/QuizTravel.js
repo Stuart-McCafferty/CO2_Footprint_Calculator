@@ -1,86 +1,98 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const QuizTravel = () => {
-  return (
-    <div>
+
+    const [number, setNumber] = useState(0)
+
+    const handleInc = () => {
+        let newNum = number + 1; 
+        setNumber(newNum);
+    }
+    
+    const handleDec = () => {
+        let newNum = number - 1; 
+        setNumber(newNum);
+    }
+
+    return (
         <div>
-            <h2>In the last year where have you traveled?</h2>
-            <form>
-                <button>Nowhere</button>
-        
+            <div>
+                <h2>In the last year where have you traveled?</h2>
+                <form>
+                    <button>Nowhere</button>
+            
 
-                <button>Within the UK</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>Mainland Europe</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+                    <button>Within the UK</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>Mainland Europe</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
 
-                <button>Asia</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+                    <button>Asia</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
 
-                <button>Africa</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+                    <button>Africa</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
 
-                <button>North America</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>South America</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>India</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>Antartica</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>Australasia</button>
-                <div>
-                    <p>How many times?</p>
-                    <p>0</p>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <button>Get My Score!</button>
-                <input type="submit"></input>
-            </form>
+                    <button>North America</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>South America</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>India</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>Antartica</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>Australasia</button>
+                    <div>
+                        <p>How many times?</p>
+                        <p>{number}</p>
+                        <button onClick={handleInc}>+</button>
+                        <button onClick={handleDec}>-</button>
+                    </div>
+                    <button>Get My Score!</button>
+                </form>
+            </div>
         </div>
-    </div>
-  )
-}
+    )
+    }
 
 export default QuizTravel

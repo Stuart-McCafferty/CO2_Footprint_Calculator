@@ -3,17 +3,17 @@ import QuizFood from './QuizFood'
 import QuizTransport from './QuizTransport'
 import QuizTravel from './QuizTravel'
 
-const QuizGrid = () => {
+const QuizGrid = ({number, handleDec, handleInc}) => {
   return (
     <div>
-      <QuizTransport/>
-      <QuizFood/>
+      <QuizTransport number={number} handleDec={handleDec} handleInc={handleInc}/>
+      <QuizFood number={number} handleDec={handleDec} handleInc={handleInc}/>
       <QuizTravel/>
     </div>
   )
 }
 
-export default QuizGrid
+export default QuizGrid;
 
 //This is more for styling purposes
 

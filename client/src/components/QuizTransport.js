@@ -6,7 +6,7 @@ const QuizTransport = () => {
         <form>
             <label>
                 <h2>How do you get to work?</h2>
-             </label>
+            </label>
             <button type="submit">Car</button>
             <button type="submit">Bus</button>
             <button type="submit">Train</button>
