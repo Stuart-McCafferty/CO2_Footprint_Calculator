@@ -16,7 +16,10 @@ const promiseJson = {
       type: "html",
       html: "<h2>OK {name}, are you ready to reduce your carbon footprint?.</h2>"
     }]
-  }, {
+  }, 
+  
+//   Travel
+  {
     elements: [{
       name: "Transport",
       title: "Would it work for you to use your bike or walk more?",
@@ -27,7 +30,10 @@ const promiseJson = {
       ],
       isRequired: true
     }]
-  }, {
+  }, 
+  
+//   Food
+  {
     elements: [{
       name: "Meat",
       title: "Eat less beef and lamb?",
@@ -53,27 +59,11 @@ const promiseJson = {
       }],
     },
 
-    {
-        elements: [{
-          name: "Veggie",
-          title: "Eat more vegetarian meals?",
-          type: "radiogroup",
-          choices: [
-              { value: 1, text: "Yes" },
-              { value: 2, text: "No" }
-            ],
-            isRequired: true
-        }],
-      },
-
-
-    
     // CONTINENTS 
-
     {
         elements: [{
-          name: "Veggie",
-          title: "Eat more vegetarian meals?",
+          name: "Long-haul flight",
+          title: "Avoid long distance flying.",
           type: "radiogroup",
           choices: [
               { value: 1, text: "Yes" },
@@ -83,8 +73,31 @@ const promiseJson = {
         }],
       },
 
+    {
+        elements: [{
+          name: "Medium-haul flight",
+          title: "Reduce your medium-haul flights",
+          type: "radiogroup",
+          choices: [
+              { value: 1, text: "Yes" },
+              { value: 2, text: "No" }
+            ],
+            isRequired: true
+        }],
+      },
 
-  
+      {
+        elements: [{
+          name: "Domestic flight",
+          title: "Avoid domestic flights",
+          type: "radiogroup",
+          choices: [
+              { value: 1, text: "Yes" },
+              { value: 2, text: "No" }
+            ],
+            isRequired: true
+        }],
+      },
   ],
   
   // showQuestionNumbers: "off",
@@ -92,8 +105,8 @@ const promiseJson = {
   completeText: "Submit",
   showPrevButton: false,
   firstPageIsStarted: true,
-  startSurveyText: "Take the Survey",
-  completedHtml: "Thank you for your feedback!",
+  startSurveyText: "Reduce your carbon footprint",
+  completedHtml: "Do you want to recieve a summary of your carbon footprint and your climate promises?",
   showPreviewBeforeComplete: "showAnsweredQuestions"
 }
 ]}
