@@ -1,3 +1,4 @@
+
 import { useCallback, useState, useRef } from 'react';
 
 // import './App.css'
@@ -100,7 +101,7 @@ const surveyJson = {
     {
       elements: [{
         name: "CheeseQuestion",
-        title: "Do you eat Fish?",
+        title: "Do you eat Cheese?",
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
@@ -302,7 +303,7 @@ const surveyJson = {
       ],
     },
     {
-      name: "NortAmericaChoice",
+      name: "NorthAmericaChoice",
       title: "How many times?",
       type: "rating",
       isRequired: true,
