@@ -5,9 +5,18 @@ import 'survey-core/modern.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { ResultsPage } from '../components/ResultsPage';
+import drain from 'drain-js';
 
 
 StylesManager.applyTheme("modern");
+
+drain({ 
+    start: 100, 
+    end: 1000, 
+    onInterval: function(val){
+      // do something
+    }
+  });
 
 const promiseJson = { 
   showProgressBar: "top", 
