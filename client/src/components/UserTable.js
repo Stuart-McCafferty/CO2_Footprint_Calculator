@@ -7,7 +7,7 @@ const UserTable = ({user}) => {
     
   return (
     <div>
-        <p>{user.name} {user.location} {user.score}</p>
+        <p>{user.name} {user.location} {user.score} {user.transport} {user.food} {user.travel}</p>
     </div>
   )
 }
