@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const ResultsPage = ({surveyResults}) => {
-
+²
     let counter = 0;
     const results = JSON.parse(surveyResults)
     const resultsMap = new Map(Object.entries(results));
@@ -100,7 +99,7 @@ export const ResultsPage = ({surveyResults}) => {
     return (
         <>
         <div>
-            <p>Your CO2 Footprint is: {counter} tons CO² per year</p>
+            <p>Your CO2 Footprint is: {counter} tons CO₂ per year</p>
             {surveyResults}
         </div>
         </>

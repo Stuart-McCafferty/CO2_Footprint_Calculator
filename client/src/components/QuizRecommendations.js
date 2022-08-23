@@ -2,7 +2,7 @@ import React from 'react'
 import drain from 'drain-js';
 
 drain({ 
-    start: 1000, 
+    start: {counter}, 
     end: 0, 
     onInterval: function(val){
         // do something
