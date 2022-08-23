@@ -10,6 +10,8 @@ import drain from 'drain-js';
 
 StylesManager.applyTheme("modern");
 
+export const ResultsPage = ({surveyResults}) => {
+
 drain({ 
     start: 100, 
     end: 1000, 

@@ -100,7 +100,7 @@ export const ResultsPage = ({surveyResults}) => {
     return (
         <>
         <div>
-            <p>Your CO2 Footprint is: {counter}</p>
+            <p>Your CO2 Footprint is: {counter} tons CO² per year</p>
             {surveyResults}
         </div>
         </>
