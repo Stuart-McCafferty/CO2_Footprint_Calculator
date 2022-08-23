@@ -27,7 +27,19 @@ const surveyJson = {
       type: "html",
       html: "<h2>Calculate your footprint then choose and track challenges to help you make small changes in your own life that add up to something bigger.</h2>"
     }]
+  },
+  {
+    elements: [{
+    type: "text",
+    name: "FirstName",
+    title: "Enter your first name:"
   }, {
+    type: "text",
+    name: "LastName",
+    title: "Enter your last name:"
+  }]
+  },
+  {
     elements: [{
       name: "Transport",
       title: "How do you get to work?",
