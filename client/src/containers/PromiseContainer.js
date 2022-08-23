@@ -120,7 +120,7 @@ const promiseJson = {
   completedHtml: "Do you want to recieve a summary of your carbon footprint and your climate promises?",
   showPreviewBeforeComplete: "showAnsweredQuestions"
 }
-]}
+}
 
 // function QuizContainer() {
 //   // useRef enables the Model object to persist between state changes
