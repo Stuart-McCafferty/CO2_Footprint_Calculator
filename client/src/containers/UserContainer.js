@@ -7,25 +7,25 @@ import HighchartsReact from 'highcharts-react-official';
 const UserContainer = ({users}) => {
     const transportScores = users.map((user)=> {
         return (
-          user.transport
+          user.TransportScores
         )
     })
 
     const foodScores = users.map((user)=> {
       return (
-        user.food
+        user.FoodScores
       )
   })
 
   const travelScores = users.map((user)=> {
     return (
-      user.travel
+      user.TravelScores
     )
   })
 
   const userNames = users.map((user)=> {
     return (
-      user.name
+      user.FirstName
     )
   })
 
