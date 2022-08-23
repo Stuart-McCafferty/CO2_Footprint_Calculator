@@ -402,8 +402,9 @@ function QuizContainer() {
         </div>
         )
       }
-      
+
     </>
+
   );
 }
 

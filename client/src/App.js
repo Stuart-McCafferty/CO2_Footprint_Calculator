@@ -14,9 +14,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import { getUsers } from './components/QuizService';
 
-import PromiseContainer from "./containers/PromiseContainer";
 import ImprovementContainer from "./containers/ImprovementContainer";
-import UserForm from './components/UserForm';
 
 
 import { HomePage } from "./components/HomePage";
@@ -61,9 +59,6 @@ function App(){
       <Route path="/" element={<HomePage/>}/>
       <Route path="/table" element={<UserContainer users={users}/>}/>
       <Route path="/improvements" element={<ImprovementContainer />}/>
-      <Route path="/userform" element={<UserForm />}/>
-
-
   </Routes>
 </Router>
 

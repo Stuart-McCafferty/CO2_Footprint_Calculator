@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export const ResultsPage = ({surveyResults}) => {
 
@@ -149,6 +150,10 @@ export const ResultsPage = ({surveyResults}) => {
             <p>Your Transport CO2 is: {transportCounter} Tons of CO² per year</p>
             <p>Your Food CO2 is: {foodCounter} Tons of CO² per year</p>
             <p>Your Travel CO2 is: {travelCounter } Tons of CO² per year</p>
+
+            <Link to="/improvements">
+                <button>Click</button>
+            </Link>
         </div>
         </>
         
