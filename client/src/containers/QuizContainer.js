@@ -412,7 +412,7 @@ function QuizContainer() {
 
   // surveyJson.showProgressBar = 'bottom';
   // ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));
-
+  
   return (
     <>
     
