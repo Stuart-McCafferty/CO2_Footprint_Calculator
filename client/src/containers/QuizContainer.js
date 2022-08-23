@@ -17,7 +17,7 @@ const surveyJson = {
   pages: [{
     elements: [{
       type: "html",
-      html: "<h2>In this survey, we will ask you a couple questions about your impressions of our product.</h2>"
+      html: "<h2>Calculate your footprint then choose and track challenges to help you make small changes in your own life that add up to something bigger.</h2>"
     }]
   }, {
     elements: [{
