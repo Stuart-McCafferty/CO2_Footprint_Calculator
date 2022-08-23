@@ -14,6 +14,15 @@ StylesManager.applyTheme("modern");
 
 const surveyJson = { 
   showProgressBar: "top", 
+  showQuestionNumbers: "off",
+  pageNextText: "Next",
+  completeText: "Submit",
+  showPrevButton: true,
+  firstPageIsStarted: true,
+  showCompletedPage: false,
+  startSurveyText: "Take the Survey",
+  completedHtml: "Thank you for your feedback!",
+  showPreviewBeforeComplete: "showAnsweredQuestions",
   pages: [{
     elements: [{
       type: "html",
@@ -353,14 +362,6 @@ const surveyJson = {
     },
   
   ],
-  
-  // showQuestionNumbers: "off",
-  pageNextText: "Next",
-  completeText: "Submit",
-  showPrevButton: false,
-  firstPageIsStarted: true,
-  startSurveyText: "Take the Survey",
-  showPreviewBeforeComplete: "showAnsweredQuestions"
 }
 ]}
 
