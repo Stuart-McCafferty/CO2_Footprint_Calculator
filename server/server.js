@@ -49,7 +49,7 @@ app.use('/api/values', valuesRouter);
 MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
 .then((client) => {
     const db = client.db('co2_app_users');
-    const users = db.collection('app_user');
+    const users = db.collection('app_users');
     const usersRouter = createRouter(users);
     app.use('/api/users', usersRouter);
 });
@@ -57,3 +57,4 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
 app.listen(9000, function () {
   console.log('App is running on port 9000');
 })
+

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import UserTable from "./components/UserTable";
+import UserContainer from "./containers/UserContainer";
 import QuizContainer from "./containers/QuizContainer";
 import styled from "styled-components";
 import Lottie from "react-lottie";
@@ -8,10 +9,12 @@ import animationData from "./Lottie/Earth.json"
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
+import { getUsers } from './components/QuizService';
 
 
 function App(){
   const [values, setValues] = useState([]);
+  const [users, setUsers] = useState([]);
 
   // useEffect(() => {
   //   fetch('http://localhost:9000/api/values')
@@ -19,6 +22,13 @@ function App(){
   //     .then(data => setValues(data));
   // })
 
+feature/table
+  useEffect(()=>{
+    getUsers().then((allUsers)=> {
+      setUsers(allUsers)
+    })
+  },[]);
+  
   const defaultOptions = {
     loop: false,
     autoplay: true,
@@ -56,7 +66,7 @@ function App(){
         <Routes>
             {/* <Route path="/" element={<Home/>}/> */}
             <Route path="/quiz" element={<QuizContainer/>}/>
-            <Route path="/table" element={<UserTable/>}/>
+            <Route path="/table" element={<UserContainer users={users}/>}/>
         </Routes>
     </Router>
 
