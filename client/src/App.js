@@ -3,6 +3,9 @@ import UserTable from "./components/UserTable";
 import UserContainer from "./containers/UserContainer";
 import QuizContainer from "./containers/QuizContainer";
 import styled from "styled-components";
+import { render } from 'react-dom';
+import Highcharts from 'highcharts/highstock';
+import HighchartsReact from 'highcharts-react-official';
 // import Lottie from "react-lottie";
 // import animation from "./Lottie/Earth.json"
 // import animationData from "./Lottie/Earth.json"
@@ -29,6 +32,7 @@ function App(){
     })
   },[]);
   
+  
   // const defaultOptions = {
   //   loop: false,
   //   autoplay: true,
@@ -39,6 +43,8 @@ function App(){
   // };
 
   return (
+
+    <>
     <HomepageContainer>
       <NavBarContainer>
         <SiteHeading>CO2 CALCULATOR</SiteHeading>
@@ -61,16 +67,18 @@ function App(){
           </SurveyContainer>
         </BodyContainer>
 
-        <Router>
-      {/* <NavBar/> */}
-        <Routes>
-            {/* <Route path="/" element={<Home/>}/> */}
-            <Route path="/quiz" element={<QuizContainer/>}/>
-            <Route path="/table" element={<UserContainer users={users}/>}/>
-        </Routes>
-    </Router>
-
     </HomepageContainer>
+
+<Router>
+{/* <NavBar/> */}
+  <Routes>
+      {/* <Route path="/" element={<Home/>}/> */}
+      <Route path="/quiz" element={<QuizContainer/>}/>
+      <Route path="/table" element={<UserContainer users={users}/>}/>
+  </Routes>
+</Router>
+
+</>
     
     );  
 
