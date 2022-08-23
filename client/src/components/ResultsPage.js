@@ -149,10 +149,10 @@ export const ResultsPage = ({surveyResults}) => {
             <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
             <TotalScore>{counter} kg</TotalScore>
             <h4>{introText} you are a {user}</h4>
-            {user === "Climate Criminal" ? <img src={require('./images/MafiaBoss.jpeg').default} /> : null}
-            {user === "Climate Thug" ? <img src={"./images/big-fat-stupid-looking-burglar-thug.jpeg"} /> : null}
-            {user === "Climate Citizen" ? <img src={"./images/citizen.png"} />: null}
-            {user === "Climate Hero" ? <img src={"./images/climatehero.png"} /> : null}
+            {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} /> : null}
+            {user === "Climate Thug" ? <img src={require('./big-fat-stupid-looking-burglar-thug.jpeg')} /> : null}
+            {user === "Climate Citizen" ? <img src={require('./citizen.png')} />: null}
+            {user === "Climate Hero" ? <img src={require('./climatehero.png')} /> : null}
 
             <p>Your Transport CO2 is: {transportCounter} kg of CO² per year</p>
             <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
