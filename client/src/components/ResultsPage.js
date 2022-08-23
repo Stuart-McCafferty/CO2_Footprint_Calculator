@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
 export const ResultsPage = ({surveyResults}) => {
 
@@ -123,15 +124,20 @@ export const ResultsPage = ({surveyResults}) => {
     const climateHero = 1;
 
     let user = ""
+    let introText = ""
 
     if (counter >= climateMafiaBoss){
         user = "Climate Mafia Boss"
+        introText = "Oh dear..."
     } else if(counter >=climateThug && counter < climateMafiaBoss ){
         user = "Climate Thug"
+        introText = "Uh oh"
     } else if(counter >= climateCitizen && counter < climateThug){
-        user = "Climate Citizen"
+        user = "Climate Citizen!"
+        introText = "Well done"
     } else {
-        user = "Climate Hero"
+        user = "Climate Hero!"
+        introText = "Congratulations"
     }
 
     console.log(surveyResults)
@@ -139,8 +145,9 @@ export const ResultsPage = ({surveyResults}) => {
     return (
         <>
         <div>
-            <h3>Your CO2 Footprint is: {counter} kg of CO² per year</h3>
-            <h4>You are a {user}</h4>
+            <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
+            <TotalScore>{counter} kg</TotalScore>
+            <h4>{introText} you are a {user}</h4>
             {user === "Climate Mafia Boss" ? <p>Mafia IMAGE GOES HERE</p> : null}
             {user === "Climate Thug" ? <p>Thug IMAGE GOES HERE</p> : null}
             {user === "Climate Citizen" ? <p>Citizen IMAGE GOES HERE</p> : null}
@@ -159,3 +166,14 @@ export const ResultsPage = ({surveyResults}) => {
         
     )
 }
+
+const ResultsHeading = styled.h3`
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+`
+const TotalScore = styled.h2`
+
+    font-family: 'Rubik Dirt';
+    font-size: 24px;
+    font-weight: bold;
+`
