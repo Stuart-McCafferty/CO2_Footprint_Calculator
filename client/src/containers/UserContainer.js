@@ -5,27 +5,27 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const UserContainer = ({users}) => {
-    const transportScores = users.map((user)=> {
+    const transportTotal = users.map((user)=> {
         return (
-          user.transport
+          user.transportScore
         )
     })
 
-    const foodScores = users.map((user)=> {
+    const foodTotal = users.map((user)=> {
       return (
-        user.food
+        user.foodScore
       )
   })
 
-  const travelScores = users.map((user)=> {
+  const travelTotal = users.map((user)=> {
     return (
-      user.travel
+      user.travelScore
     )
   })
 
   const userNames = users.map((user)=> {
     return (
-      user.name
+      user.FirstName
     )
   })
 
@@ -55,13 +55,13 @@ const UserContainer = ({users}) => {
     },
     series: [{
         name: 'Transport',
-        data: transportScores
+        data: transportTotal
     }, {
         name: 'Food',
-        data: foodScores
+        data: foodTotal
     }, {
         name: 'Travel',
-        data: travelScores
+        data: travelTotal
     }]
     };
     
