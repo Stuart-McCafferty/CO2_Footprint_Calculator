@@ -10,6 +10,9 @@ import animationData from "./Lottie/Earth.json"
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import { getUsers } from './components/QuizService';
+import PromiseContainer from "./containers/PromiseContainer";
+import ImprovementContainer from "./containers/ImprovementContainer";
+
 
 
 function App(){
@@ -53,7 +56,7 @@ function App(){
       </NavBarContainer>
         <HeaderContainer>
           <H1>CHALLENGE YOURSELF TO MAKE A DIFFERENCE</H1>
-          <Para>The Climate Crisis is here, what are you going to do about it?x</Para>
+          <Para>The Climate Crisis is here, what are you going to do about it?</Para>
         </HeaderContainer>
         <BodyContainer>
           <SurveyContainer>
@@ -67,6 +70,8 @@ function App(){
             {/* <Route path="/" element={<Home/>}/> */}
             <Route path="/quiz" element={<QuizContainer/>}/>
             <Route path="/table" element={<UserContainer users={users}/>}/>
+            <Route path="/improvement" element={<ImprovementContainer/>}/>
+
         </Routes>
     </Router>
 

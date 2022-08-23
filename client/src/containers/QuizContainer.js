@@ -1,4 +1,3 @@
-
 import { useCallback, useState, useRef } from 'react';
 
 // import './App.css'
@@ -388,12 +387,10 @@ function QuizContainer() {
       {isSurveyCompleted && (
         <div>
           <ResultsPage surveyResults={surveyResults}/>
-            <code style={{ whiteSpace: 'pre' }}>
-            {surveyResults}
-          </code>
         </div>
         )
       }
+      
     </>
   );
 }
