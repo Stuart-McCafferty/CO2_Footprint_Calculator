@@ -47,10 +47,10 @@ const surveyJson = {
       title: "How do you get to work?",
       type: "radiogroup",
       choices: [
-        { value: 1, text: "Car" },
-        { value: 2, text: "Bus" },
-        { value: 3, text: "Train" },
-        { value: 4, text: "Walk/cycle" }
+        { value: 470, text: "Car" },
+        { value: 135, text: "Bus" },
+        { value: 88, text: "Train" },
+        { value: 0, text: "Walk/cycle" }
       ],
       isRequired: true
     }]
@@ -285,7 +285,7 @@ const surveyJson = {
 
     elements: [{
       name: "UK",
-      title: "Have you tavelled within the UK?",
+      title: "Have you travelled within the UK?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -301,7 +301,7 @@ const surveyJson = {
     },
     {
       name: "Europe",
-      title: "Have you tavelled to Europe?",
+      title: "Have you travelled to Europe?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -317,7 +317,7 @@ const surveyJson = {
     },
     {
       name: "Asia",
-      title: "Have you tavelled to Asia?",
+      title: "Have you travelled to Asia?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -333,7 +333,7 @@ const surveyJson = {
     },
     {
       name: "NorthAmerica",
-      title: "Have you tavelled to North America?",
+      title: "Have you travelled to North America?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -348,7 +348,7 @@ const surveyJson = {
       visibleIf: "{NorthAmerica} = 'Yes'", 
     },{
       name: "SouthAmerica",
-      title: "Have you tavelled to South America?",
+      title: "Have you travelled to South America?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -363,7 +363,7 @@ const surveyJson = {
       visibleIf: "{SouthAmerica} = 'Yes'", 
     },{
       name: "Oceania",
-      title: "Have you tavelled to Oceania?",
+      title: "Have you travelled to Oceania?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -378,7 +378,7 @@ const surveyJson = {
       visibleIf: "{Oceania} = 'Yes'", 
     },{
       name: "Africa",
-      title: "Have you tavelled to Africa?",
+      title: "Have you travelled to Africa?",
       type: "radiogroup",
       isRequired: true,
       choices: [
@@ -420,6 +420,7 @@ function QuizContainer() {
       {isSurveyCompleted && (
         <div>
           <ResultsPage surveyResults={surveyResults}/>
+          {surveyResults}
         </div>
         )
       }

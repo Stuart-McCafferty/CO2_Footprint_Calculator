@@ -24,103 +24,102 @@ export const ResultsPage = ({surveyResults}) => {
 
     // Cheese
     if (resultsMap.get('CheeseChoice')){
-        counter += resultsMap.get('CheeseChoice') * 5
+        counter += resultsMap.get('CheeseChoice') * 102
         console.log(1)
-        foodCounter += resultsMap.get('CheeseChoice') * 5
+        foodCounter += resultsMap.get('CheeseChoice') * 102
         
     }
     // Milk
     if (resultsMap.get('MilkChoice')){
         console.log(2)
-        counter += resultsMap.get('MilkChoice') * 5
-        foodCounter += resultsMap.get('MilkChoice') * 5
+        counter += resultsMap.get('MilkChoice') * 12
+        foodCounter += resultsMap.get('MilkChoice') * 12
 
     }
     // Egg
     if (resultsMap.get('EggChoice')){
         console.log(3)
-        counter += resultsMap.get('EggChoice') * 5
-        foodCounter += resultsMap.get('EggChoice') * 5
+        counter += resultsMap.get('EggChoice') * 22
+        foodCounter += resultsMap.get('EggChoice') * 22
     }
     // Beef
     if (resultsMap.get('Beef Choice')){
         console.log(4)
-        counter += resultsMap.get('BeefChoice') * 5
-        foodCounter += resultsMap.get('BeefChoice') * 5
+        counter += resultsMap.get('BeefChoice') * 175
+        foodCounter += resultsMap.get('BeefChoice') * 175
     }
     // Lamb
     if (resultsMap.get('LambChoice')){
         console.log(5)
-        counter += resultsMap.get('LambChoice') * 5
-        foodCounter += resultsMap.get('LambChoice') * 5
+        counter += resultsMap.get('LambChoice') * 256
+        foodCounter += resultsMap.get('LambChoice') * 256
     }
     // Pork
     if (resultsMap.get('PorkChoice')){
         console.log(6)
-        counter += resultsMap.get('PorkChoice') * 5
-        foodCounter += resultsMap.get('PorkChoice') * 5
+        counter += resultsMap.get('PorkChoice') * 79
+        foodCounter += resultsMap.get('PorkChoice') * 79
     }
     // TinnedFish
     if (resultsMap.get('TinnedFishChoice')){
         console.log(7)
-        counter += resultsMap.get('TinnedFishChoice') * 5
-        foodCounter += resultsMap.get('TinnedFishChoice') * 5
+        counter += resultsMap.get('TinnedFishChoice') * 40
+        foodCounter += resultsMap.get('TinnedFishChoice') * 40
     }
     // Shellfish
     if (resultsMap.get('ShellfishChoice')){
         console.log(8)
-        counter += resultsMap.get('ShellfishChoice') * 5
-        foodCounter += resultsMap.get('ShellfishChoice') * 5
+        counter += resultsMap.get('ShellfishChoice') * 21
+        foodCounter += resultsMap.get('ShellfishChoice') * 21
     }
     // FreshFish
     if (resultsMap.get('FreshFishChoice')){
         console.log(9)
-        counter += resultsMap.get('FreshFishChoice') * 5
-        foodCounter += resultsMap.get('FreshFishChoice') * 5
+        counter += resultsMap.get('FreshFishChoice') * 16
+        foodCounter += resultsMap.get('FreshFishChoice') * 16
     }
     // UK
     if (resultsMap.get('UKChoice')){
         console.log(10)
-        counter += resultsMap.get('UKChoice') * 5
-        travelCounter += resultsMap.get('UKChoice') * 5
+        counter += resultsMap.get('UKChoice') * 10
+        travelCounter += resultsMap.get('UKChoice') * 10
     }
     // Europe
     if (resultsMap.get('EuropeChoice')){
         console.log(11)
-        counter += resultsMap.get('EuropeChoice') * 5
-        travelCounter += resultsMap.get('EuropeChoice') * 5
+        counter += resultsMap.get('EuropeChoice') * 600
+        travelCounter += resultsMap.get('EuropeChoice') * 600
 
     }
     // NorthAmerica
     if (resultsMap.get('NorthAmericaChoice')){
         console.log(12)
-        counter += resultsMap.get('NorthAmericaChoice') * 5
-        travelCounter += resultsMap.get('NorthAmericaChoice') * 5
+        counter += resultsMap.get('NorthAmericaChoice') * 1550
+        travelCounter += resultsMap.get('NorthAmericaChoice') * 1550
     }
     // SouthAmerica
     if (resultsMap.get('SouthAmericaChoice')){
         console.log(13)
-        counter += resultsMap.get('SouthAmericaChoice') * 5
-        travelCounter += resultsMap.get('SouthAmericaChoice') * 5
+        counter += resultsMap.get('SouthAmericaChoice') * 2800
+        travelCounter += resultsMap.get('SouthAmericaChoice') * 2800
     }
     // Oceania
     if (resultsMap.get('OceaniaChoice')){
         console.log(14)
-        counter += resultsMap.get('OceaniaChoice') * 5
-        travelCounter += resultsMap.get('OceaniaChoice') * 5
+        counter += resultsMap.get('OceaniaChoice') * 5000
+        travelCounter += resultsMap.get('OceaniaChoice') * 5000
     }
     // Africa
     if (resultsMap.get('AfricaChoice')){
         console.log(15)
-        counter += resultsMap.get('AfricaChoice') * 5
-        travelCounter += resultsMap.get('AfricaChoice') * 5
+        counter += resultsMap.get('AfricaChoice') * 2290
+        travelCounter += resultsMap.get('AfricaChoice') * 2990
     }
 
     console.log(counter)
-
-    const climateMafiaBoss = 5;
-    const climateThug = 3;
-    const climateCitizen = 2;
+    const climateMafiaBoss = 5000;
+    const climateThug = 3000;
+    const climateCitizen = 1000;
     const climateHero = 1;
 
     let user = ""
@@ -140,16 +139,17 @@ export const ResultsPage = ({surveyResults}) => {
     return (
         <>
         <div>
-            <h3>Your CO2 Footprint is: {counter} Tons of CO² per year</h3>
+            <h3>Your CO2 Footprint is: {counter} kg of CO² per year</h3>
             <h4>You are a {user}</h4>
             {user === "Climate Mafia Boss" ? <p>Mafia IMAGE GOES HERE</p> : null}
             {user === "Climate Thug" ? <p>Thug IMAGE GOES HERE</p> : null}
             {user === "Climate Citizen" ? <p>Citizen IMAGE GOES HERE</p> : null}
             {user === "Climate Hero" ? <p>Hero IMAGE GOES HERE</p> : null}
 
-            <p>Your Transport CO2 is: {transportCounter} Tons of CO² per year</p>
-            <p>Your Food CO2 is: {foodCounter} Tons of CO² per year</p>
-            <p>Your Travel CO2 is: {travelCounter } Tons of CO² per year</p>
+            <p>Your Transport CO2 is: {transportCounter} kg of CO² per year</p>
+            <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
+            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p>
+
 
             <Link to="/improvements">
                 <button>Click</button>
