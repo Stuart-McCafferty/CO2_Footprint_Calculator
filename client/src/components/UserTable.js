@@ -4,9 +4,7 @@ const UserTable = ({user}) => {
     
   return (
     <div>
-        <p>{user.name}</p>
-        <p>{user.location}</p>
-        <p>{user.score}</p>
+        <p>{user.name} {user.location} {user.score}</p>
     </div>
   )
 }
