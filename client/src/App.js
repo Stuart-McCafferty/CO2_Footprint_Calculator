@@ -22,7 +22,7 @@ function App(){
   //     .then(data => setValues(data));
   // })
 
-feature/table
+
   useEffect(()=>{
     getUsers().then((allUsers)=> {
       setUsers(allUsers)
