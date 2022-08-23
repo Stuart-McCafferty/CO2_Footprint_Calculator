@@ -11,7 +11,7 @@ return (
           {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
         <NavLinks>
         <Link to="/">Home</Link>
-        <Link to="/quiz">Quiz</Link>
+        <Link to="/improvements">Improvements</Link>
         <Link to="/table">Table</Link>
         </NavLinks>
     </NavBarContainer>

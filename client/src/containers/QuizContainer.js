@@ -27,7 +27,21 @@ const surveyJson = {
       type: "html",
       html: "<h2>Calculate your footprint then choose and track challenges to help you make small changes in your own life that add up to something bigger.</h2>"
     }]
+  },
+  {
+    elements: [{
+    type: "text",
+    name: "FirstName",
+    isRequired: true,
+    title: "Enter your first name:"
   }, {
+    type: "text",
+    name: "LastName",
+    isRequired: true,
+    title: "Enter your last name:"
+  }]
+  },
+  {
     elements: [{
       name: "Transport",
       title: "How do you get to work?",
@@ -60,6 +74,7 @@ const surveyJson = {
         name: "CheeseQuestion",
         title: "Do you eat Cheese?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -76,6 +91,7 @@ const surveyJson = {
         name: "MilkQuestion",
         title: "Do you drink Milk?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -92,6 +108,7 @@ const surveyJson = {
         name: "EggQuestion",
         title: "Do you eat Eggs?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -108,9 +125,10 @@ const surveyJson = {
     // NON-VEGGIE
     {
       elements: [{
-        name: "CheeseQuestion",
+        name: "CheeseQuestion2",
         title: "Do you eat Cheese?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -121,12 +139,13 @@ const surveyJson = {
         title: "How many portions of cheese do you eat per week?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{CheeseQuestion} = 'Yes'", 
+        visibleIf: "{CheeseQuestion2} = 'Yes'", 
       },
       {
-        name: "MilkQuestion",
+        name: "MilkQuestion2",
         title: "Do you drink Milk?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -137,12 +156,13 @@ const surveyJson = {
         title: "How much milk do you drink?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{MilkQuestion} = 'Yes'", 
+        visibleIf: "{MilkQuestion2} = 'Yes'", 
       },
       {
-        name: "EggQuestion",
+        name: "EggQuestion2",
         title: "Do you eat Eggs?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -153,12 +173,13 @@ const surveyJson = {
         title: "How many eggs do you eat in a week?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{EggQuestion} = 'Yes'", 
+        visibleIf: "{EggQuestion2} = 'Yes'", 
       },
       {
         name: "BeefQuestion",
         title: "Do you eat Beef?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -175,6 +196,7 @@ const surveyJson = {
         name: "LambQuestion",
         title: "Do you eat Lamb?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -191,6 +213,7 @@ const surveyJson = {
         name: "PorkQuestion",
         title: "Do you eat Pork?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -207,6 +230,7 @@ const surveyJson = {
         name: "TinnedFishQuestion",
         title: "Do you eat Tinned Fish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -223,6 +247,7 @@ const surveyJson = {
         name: "ShellfishQuestion",
         title: "Do you eat  Shellfish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -239,6 +264,7 @@ const surveyJson = {
         name: "FreshFishQuestion",
         title: "Do you eat Fresh Fish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -261,6 +287,7 @@ const surveyJson = {
       name: "UK",
       title: "Have you travelled within the UK?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -276,6 +303,7 @@ const surveyJson = {
       name: "Europe",
       title: "Have you travelled to Europe?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -291,6 +319,7 @@ const surveyJson = {
       name: "Asia",
       title: "Have you travelled to Asia?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -306,6 +335,7 @@ const surveyJson = {
       name: "NorthAmerica",
       title: "Have you travelled to North America?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -320,6 +350,7 @@ const surveyJson = {
       name: "SouthAmerica",
       title: "Have you travelled to South America?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -334,6 +365,7 @@ const surveyJson = {
       name: "Oceania",
       title: "Have you travelled to Oceania?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -348,6 +380,7 @@ const surveyJson = {
       name: "Africa",
       title: "Have you travelled to Africa?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -391,8 +424,9 @@ function QuizContainer() {
         </div>
         )
       }
-      
+
     </>
+
   );
 }
 
