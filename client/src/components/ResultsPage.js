@@ -114,7 +114,7 @@ export const ResultsPage = ({surveyResults}) => {
     if (resultsMap.get('AfricaChoice')){
         console.log(15)
         counter += resultsMap.get('AfricaChoice') * 2290
-        travelCounter += resultsMap.get('AfricaChoice') * 2990
+        travelCounter += resultsMap.get('AfricaChoice') * 2290
     }
 
     console.log(counter)
