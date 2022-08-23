@@ -3,9 +3,9 @@ import UserTable from "./components/UserTable";
 import UserContainer from "./containers/UserContainer";
 import QuizContainer from "./containers/QuizContainer";
 import styled from "styled-components";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 // import animation from "./Lottie/Earth.json"
-import animationData from "./Lottie/Earth.json"
+// import animationData from "./Lottie/Earth.json"
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
@@ -29,21 +29,21 @@ function App(){
     })
   },[]);
   
-  const defaultOptions = {
-    loop: false,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
+  // const defaultOptions = {
+  //   loop: false,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice"
+  //   }
+  // };
 
   return (
     <HomepageContainer>
       <NavBarContainer>
         <SiteHeading>CO2 CALCULATOR</SiteHeading>
         <AnimationContainer>
-          <Lottie options={defaultOptions} height={200} width={200} />
+          {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
         </AnimationContainer>
         <NavLinks>
           <Link>Quiz</Link>
