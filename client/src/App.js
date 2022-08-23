@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react";
+import UserTable from "./components/UserTable";
 import QuizContainer from "./containers/QuizContainer";
 import styled from "styled-components";
 import Lottie from "react-lottie";
 // import animation from "./Lottie/Earth.json"
 import animationData from "./Lottie/Earth.json"
 
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import NavBar from "./components/NavBar";
 
 
 function App(){
@@ -27,7 +30,7 @@ function App(){
 
   return (
     <HomepageContainer>
-      <NavBar>
+      <NavBarContainer>
         <SiteHeading>CO2 CALCULATOR</SiteHeading>
         <AnimationContainer>
           <Lottie options={defaultOptions} height={200} width={200} />
@@ -37,7 +40,7 @@ function App(){
           <Link>Results</Link>
           <Link>Improvements</Link>
         </NavLinks>
-      </NavBar>
+      </NavBarContainer>
         <HeaderContainer>
           <H1>CHALLENGE YOURSELF TO MAKE A DIFFERENCE</H1>
           <Para>The Climate Crisis is here, what are you going to do about it?x</Para>
@@ -48,7 +51,17 @@ function App(){
           </SurveyContainer>
         </BodyContainer>
 
+        <Router>
+      {/* <NavBar/> */}
+        <Routes>
+            {/* <Route path="/" element={<Home/>}/> */}
+            <Route path="/quiz" element={<QuizContainer/>}/>
+            <Route path="/table" element={<UserTable/>}/>
+        </Routes>
+    </Router>
+
     </HomepageContainer>
+    
     );  
 
 };
@@ -58,7 +71,7 @@ const HomepageContainer = styled.main`
     background-color: #F9F5F0;
 `
 
-const NavBar = styled.nav`
+const NavBarContainer = styled.nav`
   padding-left: 50px;
   padding-right: 50px;
   display: flex;

@@ -1,4 +1,6 @@
+
 import { useCallback, useState, useRef } from 'react';
+
 // import './App.css'
 
 import 'survey-core/modern.min.css';
@@ -7,9 +9,11 @@ import { Survey } from 'survey-react-ui';
 import { ResultsPage } from '../components/ResultsPage';
 
 
+
 StylesManager.applyTheme("modern");
 
-const surveyJson = {  
+const surveyJson = { 
+  showProgressBar: "top", 
   pages: [{
     elements: [{
       type: "html",
@@ -97,7 +101,7 @@ const surveyJson = {
     {
       elements: [{
         name: "CheeseQuestion",
-        title: "Do you eat Fish?",
+        title: "Do you eat Cheese?",
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
@@ -299,7 +303,7 @@ const surveyJson = {
       ],
     },
     {
-      name: "NortAmericaChoice",
+      name: "NorthAmericaChoice",
       title: "How many times?",
       type: "rating",
       isRequired: true,
@@ -375,10 +379,11 @@ function QuizContainer() {
   survey.onComplete.add(displayResults);
 
   // surveyJson.showProgressBar = 'bottom';
-// ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));
+  // ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));
 
   return (
     <>
+    
       <Survey model={survey} id="surveyContainer" />
       {isSurveyCompleted && (
         <div>
