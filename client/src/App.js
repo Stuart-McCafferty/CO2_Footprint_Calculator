@@ -13,7 +13,13 @@ import HighchartsReact from 'highcharts-react-official';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import { getUsers } from './components/QuizService';
+
+import PromiseContainer from "./containers/PromiseContainer";
+import ImprovementContainer from "./containers/ImprovementContainer";
+
+
 import { HomePage } from "./components/HomePage";
+
 
 
 function App(){
@@ -45,6 +51,7 @@ function App(){
 
   return (
 
+
     <>
 
 <Router>
@@ -55,6 +62,7 @@ function App(){
       <Route path="/table" element={<UserContainer users={users}/>}/>
   </Routes>
 </Router>
+
 
 </>
     

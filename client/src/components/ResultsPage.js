@@ -117,19 +117,38 @@ export const ResultsPage = ({surveyResults}) => {
 
     console.log(counter)
 
+    const climateMafiaBoss = 5;
+    const climateThug = 3;
+    const climateCitizen = 2;
+    const climateHero = 1;
 
+    let user = ""
 
+    if (counter >= climateMafiaBoss){
+        user = "Climate Mafia Boss"
+    } else if(counter >=climateThug && counter < climateMafiaBoss ){
+        user = "Climate Thug"
+    } else if(counter >= climateCitizen && counter < climateThug){
+        user = "Climate Citizen"
+    } else {
+        user = "Climate Hero"
+    }
+
+    console.log(surveyResults)
 
     return (
         <>
         <div>
-            <p>Your CO2 Footprint is: {counter} Tons of CO² per year</p>
-            <p>Your Transport CO2 is: {transportCounter}</p>
-            <p>Your Food CO2 is: {foodCounter}</p>
-            <p>Your Travel CO2 is: {travelCounter}</p>
+            <h3>Your CO2 Footprint is: {counter} Tons of CO² per year</h3>
+            <h4>You are a {user}</h4>
+            {user === "Climate Mafia Boss" ? <p>Mafia IMAGE GOES HERE</p> : null}
+            {user === "Climate Thug" ? <p>Thug IMAGE GOES HERE</p> : null}
+            {user === "Climate Citizen" ? <p>Citizen IMAGE GOES HERE</p> : null}
+            {user === "Climate Hero" ? <p>Hero IMAGE GOES HERE</p> : null}
 
-
-            {surveyResults}
+            <p>Your Transport CO2 is: {transportCounter} Tons of CO² per year</p>
+            <p>Your Food CO2 is: {foodCounter} Tons of CO² per year</p>
+            <p>Your Travel CO2 is: {travelCounter } Tons of CO² per year</p>
         </div>
         </>
         
