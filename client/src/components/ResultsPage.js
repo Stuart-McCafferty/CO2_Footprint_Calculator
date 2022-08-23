@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
+
 export const ResultsPage = ({surveyResults}) => {
 
     let counter = 0;
@@ -127,7 +128,7 @@ export const ResultsPage = ({surveyResults}) => {
     let introText = ""
 
     if (counter >= climateMafiaBoss){
-        user = "Climate Mafia Boss"
+        user = "Climate Criminal"
         introText = "Oh dear..."
     } else if(counter >=climateThug && counter < climateMafiaBoss ){
         user = "Climate Thug"
@@ -148,18 +149,20 @@ export const ResultsPage = ({surveyResults}) => {
             <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
             <TotalScore>{counter} kg</TotalScore>
             <h4>{introText} you are a {user}</h4>
-            {user === "Climate Mafia Boss" ? <p>Mafia IMAGE GOES HERE</p> : null}
-            {user === "Climate Thug" ? <p>Thug IMAGE GOES HERE</p> : null}
-            {user === "Climate Citizen" ? <p>Citizen IMAGE GOES HERE</p> : null}
-            {user === "Climate Hero" ? <p>Hero IMAGE GOES HERE</p> : null}
+            {user === "Climate Criminal" ? <img src={require('./images/MafiaBoss.jpeg').default} /> : null}
+            {user === "Climate Thug" ? <img src={"./images/big-fat-stupid-looking-burglar-thug.jpeg"} /> : null}
+            {user === "Climate Citizen" ? <img src={"./images/citizen.png"} />: null}
+            {user === "Climate Hero" ? <img src={"./images/climatehero.png"} /> : null}
 
             <p>Your Transport CO2 is: {transportCounter} kg of CO² per year</p>
             <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
             <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p>
 
 
-            <Link to= "/improvements" state={ resultsMap }>               
-                <button>Click</button>
+            <Link to= "/improvements" state={ resultsMap }>
+                <Button>             
+                    <button>Find out how to reduce you're footprint here!</button>
+                </Button>  
             </Link>
         </div>
         </>
@@ -177,3 +180,10 @@ const TotalScore = styled.h2`
     font-size: 24px;
     font-weight: bold;
 `
+const Button = styled.button`
+    background-colour : #1AB394;
+    color: white; 
+    border-radius: 5px;
+    padding: 5px;
+`
+
