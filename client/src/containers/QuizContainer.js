@@ -32,10 +32,12 @@ const surveyJson = {
     elements: [{
     type: "text",
     name: "FirstName",
+    isRequired: true,
     title: "Enter your first name:"
   }, {
     type: "text",
     name: "LastName",
+    isRequired: true,
     title: "Enter your last name:"
   }]
   },
@@ -72,6 +74,7 @@ const surveyJson = {
         name: "CheeseQuestion",
         title: "Do you eat Cheese?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -88,6 +91,7 @@ const surveyJson = {
         name: "MilkQuestion",
         title: "Do you drink Milk?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -104,6 +108,7 @@ const surveyJson = {
         name: "EggQuestion",
         title: "Do you eat Eggs?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 2", 
         choices: [
           "Yes" ,"No"
@@ -123,6 +128,7 @@ const surveyJson = {
         name: "CheeseQuestion2",
         title: "Do you eat Cheese?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -139,6 +145,7 @@ const surveyJson = {
         name: "MilkQuestion2",
         title: "Do you drink Milk?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -155,6 +162,7 @@ const surveyJson = {
         name: "EggQuestion2",
         title: "Do you eat Eggs?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -171,6 +179,7 @@ const surveyJson = {
         name: "BeefQuestion",
         title: "Do you eat Beef?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -187,6 +196,7 @@ const surveyJson = {
         name: "LambQuestion",
         title: "Do you eat Lamb?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -203,6 +213,7 @@ const surveyJson = {
         name: "PorkQuestion",
         title: "Do you eat Pork?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -219,6 +230,7 @@ const surveyJson = {
         name: "TinnedFishQuestion",
         title: "Do you eat Tinned Fish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -235,6 +247,7 @@ const surveyJson = {
         name: "ShellfishQuestion",
         title: "Do you eat  Shellfish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -251,6 +264,7 @@ const surveyJson = {
         name: "FreshFishQuestion",
         title: "Do you eat Fresh Fish?",
         type: "radiogroup",
+        isRequired: true,
         visibleIf: "{Food} = 3", 
         choices: [
           "Yes" ,"No"
@@ -273,6 +287,7 @@ const surveyJson = {
       name: "UK",
       title: "Have you tavelled within the UK?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -288,6 +303,7 @@ const surveyJson = {
       name: "Europe",
       title: "Have you tavelled to Europe?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -303,6 +319,7 @@ const surveyJson = {
       name: "Asia",
       title: "Have you tavelled to Asia?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -318,6 +335,7 @@ const surveyJson = {
       name: "NorthAmerica",
       title: "Have you tavelled to North America?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -332,6 +350,7 @@ const surveyJson = {
       name: "SouthAmerica",
       title: "Have you tavelled to South America?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -346,6 +365,7 @@ const surveyJson = {
       name: "Oceania",
       title: "Have you tavelled to Oceania?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
@@ -360,6 +380,7 @@ const surveyJson = {
       name: "Africa",
       title: "Have you tavelled to Africa?",
       type: "radiogroup",
+      isRequired: true,
       choices: [
         "Yes" ,"No"
       ],
