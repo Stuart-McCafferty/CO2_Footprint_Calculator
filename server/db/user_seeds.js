@@ -1,7 +1,7 @@
 use co2_app_users;
 db.dropDatabase();
 
-db.app_users.insertMany([
+db.users.insertMany([
     {
         FirstName: "Andy",
         LastName: "Johnston",

@@ -1,5 +1,5 @@
 const express = require('express');
-
+const {ObjectId} = require('mongodb')
 const createRouter = function (data) {
 
   const router = express.Router();
@@ -25,21 +25,50 @@ const createRouter = function (data) {
   //SHOW
   router.get('/:id', (req, res) => { 
     res.json(data[req.params.id]); 
+    data
+      .findOne({_id: ObjectId(id)})
+      // _id is because that is what it's called in the database
+      .then((doc) => res.json(doc))
+      .catch((err) => {
+        res.status(500); 
+        res.json({status: 500, error: err});
+    })
+    
   });
 
 
   // CREATE
-  router.post('/', (req, res) => { 
-    data.push(req.body); 
-    res.json(data); 
+  router.post('/', (req, res) => {
+    const newUser = req.body;
+    data
+      .insertOne(newUser)
+      .then((result) => res.json(result.ops[0]))
+      .catch((err) => {
+        res.status(500); 
+        res.json({status: 500, error: err});
+      })
   });
 
 
   // UPDATE
-  router.put('/:id', (req, res) => { 
-    data[req.params.id] = req.body; 
-    res.json(data);
-  });
+  router.put('/:id', (req, res) => {
+    const id = req.params.id
+    const updatedUser = req.body;
+    data
+      .updateOne(
+        { _id: ObjectId(id) },
+        { $set: updatedUser }
+      )
+      .then(
+        (result) => {
+          res.json(result)
+        }
+      )
+      .catch((err) => {
+        res.status(500); 
+        res.json({status: 500, error: err});
+      })
+  })
 
 
   // DELETE
