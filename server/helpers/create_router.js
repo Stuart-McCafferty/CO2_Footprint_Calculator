@@ -5,16 +5,15 @@ const createRouter = function (data) {
   const router = express.Router();
 
   
-  INDEX
-  router.get('/', (req, res) => { 
-    res.json(data); 
-  });
+  // INDEX
 
   router.get('/', (req, res) => {
-    collection
+    data
     .find()
     .toArray()
-    .then((docs) => res.json(docs))
+    .then((docs) => {
+      res.json(docs);
+    })
     .catch((err) => {
       console.error(err);
       res.status(500);

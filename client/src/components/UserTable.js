@@ -1,10 +1,10 @@
 import React from 'react'
 
-const UserTable = () => {
+const UserTable = ({user}) => {
     
   return (
     <div>
-        User Table
+        <p>{user.name} {user.location} {user.score}</p>
     </div>
   )
 }

@@ -63,7 +63,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 2", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -79,7 +79,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 2", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -95,7 +95,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 2", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -114,7 +114,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -130,7 +130,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -146,7 +146,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -162,7 +162,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -178,7 +178,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -194,7 +194,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -210,7 +210,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -226,7 +226,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -242,7 +242,7 @@ const surveyJson = {
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
         choices: [
-          "Yes" ,
+          "Yes" ,"No"
         ],
       },
       {
@@ -263,7 +263,7 @@ const surveyJson = {
       title: "Have you tavelled within the UK?",
       type: "radiogroup",
       choices: [
-        "Yes"
+        "Yes" ,"No"
       ],
     },
     {
@@ -278,7 +278,7 @@ const surveyJson = {
       title: "Have you tavelled to Europe?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -293,7 +293,7 @@ const surveyJson = {
       title: "Have you tavelled to Asia?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -308,7 +308,7 @@ const surveyJson = {
       title: "Have you tavelled to North America?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -322,7 +322,7 @@ const surveyJson = {
       title: "Have you tavelled to South America?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -336,7 +336,7 @@ const surveyJson = {
       title: "Have you tavelled to Oceania?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -350,7 +350,7 @@ const surveyJson = {
       title: "Have you tavelled to Africa?",
       type: "radiogroup",
       choices: [
-        "Yes" ,
+        "Yes" ,"No"
       ],
     },
     {
@@ -362,7 +362,6 @@ const surveyJson = {
     },
   
   ],
-  
 }
 ]}
 
