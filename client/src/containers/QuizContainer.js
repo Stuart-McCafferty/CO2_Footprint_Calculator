@@ -120,7 +120,7 @@ const surveyJson = {
     // NON-VEGGIE
     {
       elements: [{
-        name: "CheeseQuestion",
+        name: "CheeseQuestion2",
         title: "Do you eat Cheese?",
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
@@ -133,10 +133,10 @@ const surveyJson = {
         title: "How many portions of cheese do you eat per week?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{CheeseQuestion} = 'Yes'", 
+        visibleIf: "{CheeseQuestion2} = 'Yes'", 
       },
       {
-        name: "MilkQuestion",
+        name: "MilkQuestion2",
         title: "Do you drink Milk?",
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
@@ -149,10 +149,10 @@ const surveyJson = {
         title: "How much milk do you drink?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{MilkQuestion} = 'Yes'", 
+        visibleIf: "{MilkQuestion2} = 'Yes'", 
       },
       {
-        name: "EggQuestion",
+        name: "EggQuestion2",
         title: "Do you eat Eggs?",
         type: "radiogroup",
         visibleIf: "{Food} = 3", 
@@ -165,7 +165,7 @@ const surveyJson = {
         title: "How many eggs do you eat in a week?",
         type: "rating",
         isRequired: true,
-        visibleIf: "{EggQuestion} = 'Yes'", 
+        visibleIf: "{EggQuestion2} = 'Yes'", 
       },
       {
         name: "BeefQuestion",
