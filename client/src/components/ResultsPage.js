@@ -151,7 +151,7 @@ export const ResultsPage = ({surveyResults}) => {
             <p>Your Food CO2 is: {foodCounter} Tons of CO² per year</p>
             <p>Your Travel CO2 is: {travelCounter } Tons of CO² per year</p>
 
-            <Link to="/improvements">
+            <Link to= "/improvements" state={ resultsMap }>               
                 <button>Click</button>
             </Link>
         </div>

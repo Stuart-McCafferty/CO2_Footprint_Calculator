@@ -13,7 +13,7 @@ import HighchartsReact from 'highcharts-react-official';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import { getUsers } from './components/QuizService';
-
+import { ResultsPage } from "./components/ResultsPage";
 import ImprovementContainer from "./containers/ImprovementContainer";
 
 
