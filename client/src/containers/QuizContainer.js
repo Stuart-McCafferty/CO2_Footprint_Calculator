@@ -422,7 +422,6 @@ function QuizContainer() {
       {isSurveyCompleted && (
         <div>
           <ResultsPage surveyResults={surveyResults}/>
-          {surveyResults}
         </div>
         )
       }
