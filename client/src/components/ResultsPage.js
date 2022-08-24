@@ -215,7 +215,7 @@ export const ResultsPage = ({surveyResults}) => {
             <TotalScore>{user}</TotalScore>
                 {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} height={300} width={300} /> : null}
                 {user === "Climate Thug" ? <img src={require('./Climate_Thug.png')} height={300} width={300} /> : null}
-                {user === "Climate Citizen" ? <img src={require('./Citizen.jpg')} height={300} width={300} />: null}
+                {user === "Climate Citizen" ? <img src={require('./citizen.png')} height={300} width={300} />: null}
                 {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
             </RightDiv>
         </ResultsBoxContainer>
