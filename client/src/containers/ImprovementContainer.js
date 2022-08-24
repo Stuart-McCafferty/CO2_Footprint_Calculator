@@ -31,8 +31,6 @@ const ImprovementContainer = () => {
     const handleClick = (parameter) => (event) => {
         setTransportChange(transportValue - parameter);
         setTotalChange(totalChange + transportChange);
-        
-
     }
     //Output
     function transport(){

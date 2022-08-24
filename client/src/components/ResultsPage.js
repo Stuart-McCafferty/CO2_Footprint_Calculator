@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import ImprovementContainer from '../containers/ImprovementContainer';
 import { postUser } from './QuizService';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 
 export const ResultsPage = ({surveyResults}) => {
@@ -53,6 +55,26 @@ export const ResultsPage = ({surveyResults}) => {
         console.log(3)
         counter += resultsMap.get('EggChoice') * 22
         foodCounter += resultsMap.get('EggChoice') * 22
+    }
+    // Cheese2
+    if (resultsMap.get('CheeseChoice2')){
+        counter += resultsMap.get('CheeseChoice2') * 102
+        console.log(1)
+        foodCounter += resultsMap.get('CheeseChoice2') * 102
+        
+    }
+    // Milk2
+    if (resultsMap.get('MilkChoice2')){
+        console.log(2)
+        counter += resultsMap.get('MilkChoice2') * 12
+        foodCounter += resultsMap.get('MilkChoice2') * 12
+
+    }
+    // Egg2
+    if (resultsMap.get('EggChoice2')){
+        console.log(3)
+        counter += resultsMap.get('EggChoice2') * 22
+        foodCounter += resultsMap.get('EggChoice2') * 22
     }
     // Beef
     if (resultsMap.get('Beef Choice')){
@@ -161,16 +183,17 @@ export const ResultsPage = ({surveyResults}) => {
 
     console.log(surveyResults)
 
+
     return (
         <>
         <div>
             <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
             <TotalScore>{counter} kg</TotalScore>
             <h4>{introText} you are a {user}</h4>
-            {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg').default} /> : null}
-            {user === "Climate Thug" ? <img src={require('./big-fat-stupid-looking-burglar-thug.jpeg')} /> : null}
-            {user === "Climate Citizen" ? <img src={require('./citizen.png')} />: null}
-            {user === "Climate Hero" ? <img src={require('./climatehero.png')} /> : null}
+            {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} height={300} width={300} /> : null}
+            {user === "Climate Thug" ? <img src={require('./Climate_Thug.png')} height={300} width={300} /> : null}
+            {user === "Climate Citizen" ? <img src={require('./Citizen.jpg')} height={300} width={300} />: null}
+            {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
 
             <p>Your Transport CO2 is: {transportCounter} kg of CO² per year</p>
             <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
@@ -182,11 +205,13 @@ export const ResultsPage = ({surveyResults}) => {
                     Find out how to reduce you're footprint here!
                 </Button>  
             </Link>
+
             <Link to= "/table">
                 <Button>
                     See how your score compares to other users!
                 </Button>
             </Link>
+
         </div>
         </>
         
