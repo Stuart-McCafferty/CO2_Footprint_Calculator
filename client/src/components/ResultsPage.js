@@ -199,7 +199,7 @@ export const ResultsPage = ({surveyResults}) => {
             <ButtonContainer>
             <Link to= "/improvements" state={ resultsMap }>
                 <Button>             
-                    Reduce you're footprint
+                    Reduce your footprint
                 </Button>  
             </Link>
             <Link to= "/table">
@@ -207,7 +207,6 @@ export const ResultsPage = ({surveyResults}) => {
                     View other users
                 </Button>
             </Link>
-
             </ButtonContainer>
             </LeftDiv>
             <RightDiv>

@@ -316,7 +316,7 @@ function travel(){
 }
 
 
-let totalChange = transportChange + foodChange + transportChange
+let totalChange = transportChange + foodChange + travelChange
 
 
 
