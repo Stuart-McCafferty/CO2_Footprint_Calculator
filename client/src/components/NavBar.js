@@ -10,15 +10,32 @@ return (
         <SiteHeading>CO2 CALCULATOR</SiteHeading>
           {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
         <NavLinks>
-        <Link to="/">Home</Link>
-        <Link to="/improvements">Improvements</Link>
-        <Link to="/table">Table</Link>
+          <Link to="/" style={linkStyle}><LinkStyle>Quiz</LinkStyle></Link>
+          <Link to="/table" style={linkStyle}><LinkStyle>Table</LinkStyle></Link>
         </NavLinks>
     </NavBarContainer>
 );
 }
 
 export default NavBar;
+
+const linkStyle = {
+  "font-size": "30px",
+  margin: "1rem",
+  textDecoration: "none",
+  color: 'white',
+  
+  
+};
+
+const LinkStyle = styled.p`
+  display: flex;
+  flex-direction: row;
+:hover {
+    color: lightblue;
+  }
+`
+
 
 
 const NavBarContainer = styled.nav`
@@ -30,11 +47,16 @@ const NavBarContainer = styled.nav`
   height: 120px;
   background-color: #0A1128;
   border-bottom: solid black 3px;
+  flex-direction: row;
+
 
 `
 const NavLinks = styled.ul`
-  color: white;
+  display: flex;
   list-style-type: none;
+  flex-direction: row;
+
+
 `
 
 const SiteHeading = styled.h1`
@@ -43,9 +65,4 @@ const SiteHeading = styled.h1`
   font-family: 'Covered By Your Grace';
   font-family: 'Rubik Dirt';
 `
-// const Link = styled.li`
-//   display: inline;
-//   margin-right: 10px;
-//   font-weight: bold;
 
-// `
