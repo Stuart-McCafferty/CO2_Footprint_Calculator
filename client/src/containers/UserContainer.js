@@ -1,8 +1,10 @@
 import React from 'react';
 import UserTable from '../components/UserTable';
 import { render } from 'react-dom';
+import { Link } from "react-router-dom";
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import styled from 'styled-components';
 
 const UserContainer = ({users}) => {
     const transportTotal = users.map((user)=> {
@@ -73,8 +75,28 @@ const UserContainer = ({users}) => {
             options={options}
           />
         </div>
+        <div>
+          <Link to="/">
+            <Button>
+              Retake Test!
+            </Button>
+          </Link>
+          
+          <Link to="/improvements">
+            <Button>
+              Improve Your Score!
+            </Button>
+          </Link>
+          </div>
     </div>
   )
 }
+
+const Button = styled.button`
+    background-color: #1AB394;
+    color: white; 
+    border-radius: 5px;
+    padding: 5px;
+`
 
 export default UserContainer
