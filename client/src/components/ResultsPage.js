@@ -174,10 +174,10 @@ export const ResultsPage = ({surveyResults}) => {
         user = "Climate Thug"
         introText = "Uh oh"
     } else if(counter >= climateCitizen && counter < climateThug){
-        user = "Climate Citizen!"
+        user = "Climate Citizen"
         introText = "Well done"
     } else {
-        user = "Climate Hero!"
+        user = "Climate Hero"
         introText = "Congratulations"
     }
 
@@ -187,27 +187,34 @@ export const ResultsPage = ({surveyResults}) => {
     return (
         <>
         <div>
+        {/* <ResultsBox> */}
             <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
             <TotalScore>{counter} kg</TotalScore>
-            <h4>{introText} you are a {user}</h4>
+            <Intro>{introText} you are a {user}</Intro>
             {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} height={300} width={300} /> : null}
             {user === "Climate Thug" ? <img src={require('./Climate_Thug.png')} height={300} width={300} /> : null}
             {user === "Climate Citizen" ? <img src={require('./Citizen.jpg')} height={300} width={300} />: null}
             {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
 
-            <p>Your Transport CO2 is: {transportCounter} kg of CO² per year</p>
+            <Breakdown>Your Transport CO2 is: {transportCounter} kg of CO² per year
             <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
-            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p>
+            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p></Breakdown>
 
 
             <Link to= "/improvements" state={ resultsMap }>
-                <Button>             
+                <button>             
                     Find out how to reduce you're footprint here!
-                </Button>  
+                </button>  
             </Link>
-            
+            <hr></hr>
 
-            
+            <Link to= "/table">
+                <button>
+                    See how your score compares to other users!
+                </button>
+            </Link>
+
+        {/* </ResultsBox> */}
         </div>
         </>
         
@@ -217,17 +224,23 @@ export const ResultsPage = ({surveyResults}) => {
 const ResultsHeading = styled.h3`
     font-family: 'Karla', sans-serif;
     letter-spacing: 1.5px;
+    text-align: center;
+    
 `
 const TotalScore = styled.h2`
 
     font-family: 'Rubik Dirt';
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 `
+const Intro = styled.h4`
+    text-align: center;
+
+
 const Button = styled.button`
     background-color: #1AB394;
     color: white; 
     border-radius: 5px;
     padding: 5px;
 `
-
