@@ -174,10 +174,10 @@ export const ResultsPage = ({surveyResults}) => {
         user = "Climate Thug"
         introText = "Uh oh"
     } else if(counter >= climateCitizen && counter < climateThug){
-        user = "Climate Citizen!"
+        user = "Climate Citizen"
         introText = "Well done"
     } else {
-        user = "Climate Hero!"
+        user = "Climate Hero"
         introText = "Congratulations"
     }
 
@@ -207,7 +207,6 @@ export const ResultsPage = ({surveyResults}) => {
             </Link>
             
 
-            
         </div>
         </>
         
@@ -230,4 +229,3 @@ const Button = styled.button`
     border-radius: 5px;
     padding: 5px;
 `
-
