@@ -91,11 +91,6 @@ const UserContainer = ({users}) => {
               Retake Test!
             </Button>
           </Link>
-          <Link to="/improvements">
-            <Button>
-              Improve Your Score!
-            </Button>
-          </Link>
           </ButtonContainer>
           <button onClick = {refreshPage}>See how you compare to other users</button>
           </>
