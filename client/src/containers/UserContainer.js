@@ -77,7 +77,8 @@ const UserContainer = ({users}) => {
     <>
             <HeaderContainer>
             <H1>USER SCORES</H1>
-            <Para>See how your score compares to other users in your area!</Para>
+            <Para>These are the scores of other users in your area</Para>
+              <Button onClick = {refreshPage}>See how you compare to other users</Button>
             </HeaderContainer>
             <GraphContainer>
           <HighchartsReact
@@ -92,7 +93,6 @@ const UserContainer = ({users}) => {
             </Button>
           </Link>
           </ButtonContainer>
-          <button onClick = {refreshPage}>See how you compare to other users</button>
           </>
   )
 }
@@ -125,7 +125,7 @@ const ButtonContainer = styled.div`
     padding-right: 150px;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    align-items: center;
 `
 
 const Button = styled.button`
