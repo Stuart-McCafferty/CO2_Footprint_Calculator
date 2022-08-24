@@ -185,62 +185,101 @@ export const ResultsPage = ({surveyResults}) => {
 
 
     return (
-        <>
-        <div>
-        {/* <ResultsBox> */}
+
+        <ResultsBoxContainer>
+            <LeftDiv>
             <ResultsHeading>Your CO² Footprint per year is: </ResultsHeading>
             <TotalScore>{counter} kg</TotalScore>
-            <Intro>{introText} you are a {user}</Intro>
-            {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} height={300} width={300} /> : null}
-            {user === "Climate Thug" ? <img src={require('./Climate_Thug.png')} height={300} width={300} /> : null}
-            {user === "Climate Citizen" ? <img src={require('./Citizen.jpg')} height={300} width={300} />: null}
-            {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
-
-            Your Transport CO2 is: {transportCounter} kg of CO² per year
-            <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
-            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p>
-
-
+            <Intro>Your Transport CO2 is:</Intro>
+            <TotalScore>{transportCounter} kg</TotalScore>
+            <Intro>Your Food CO2 is:</Intro>
+            <TotalScore>{foodCounter} kg</TotalScore>
+            <Intro>Your Travel CO2 is:</Intro>
+            <TotalScore>{travelCounter } kg</TotalScore>
+            <ButtonContainer>
             <Link to= "/improvements" state={ resultsMap }>
-                <button>             
-                    Find out how to reduce you're footprint here!
-                </button>  
+                <Button>             
+                    Reduce you're footprint
+                </Button>  
             </Link>
-            <hr></hr>
-
             <Link to= "/table">
-                <button>
-                    See how your score compares to other users!
-                </button>
+                <Button>
+                    View other users
+                </Button>
             </Link>
 
-        {/* </ResultsBox> */}
-        </div>
-        </>
+            </ButtonContainer>
+            </LeftDiv>
+            <RightDiv>
+            <Intro>{introText} you are a:</Intro>
+            <TotalScore>{user}</TotalScore>
+                {user === "Climate Criminal" ? <img src={require('./MafiaBoss.jpeg')} height={300} width={300} /> : null}
+                {user === "Climate Thug" ? <img src={require('./Climate_Thug.png')} height={300} width={300} /> : null}
+                {user === "Climate Citizen" ? <img src={require('./citizen.png')} height={300} width={300} />: null}
+                {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
+            </RightDiv>
+        </ResultsBoxContainer>
         
     )
 }
 
-const ResultsHeading = styled.h3`
+const ResultsBoxContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding: 7vh;
+    justify-content: space-around;
+
+`
+
+const LeftDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`
+const RightDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const ResultsHeading = styled.h2`
     font-family: 'Karla', sans-serif;
     letter-spacing: 1.5px;
     text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 5px;
     
 `
 const TotalScore = styled.h2`
-
     font-family: 'Rubik Dirt';
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    margin-block-start: 0px;
+    margin-inline-end: 5px;
+    
+    
 `
 const Intro = styled.h4`
     text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 2px;
 `
 
 const Button = styled.button`
     background-color: #1AB394;
     color: white; 
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    border: none;
+    margin-right: 2vw;
+    font-weight: bold;
 `
+
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+`
+// const Img = styled.Img`
+
+// `
