@@ -68,8 +68,7 @@ const UserContainer = ({users}) => {
     };
     
   return (
-    <div>
-          <div>
+    <>
             <HeaderContainer>
             <H1>USER SCORES</H1>
             <Para>See how your score compares to other users in your area!</Para>
@@ -80,23 +79,19 @@ const UserContainer = ({users}) => {
             options={options}
           />
             </GraphContainer>
-        </div>
-        <div>
           <ButtonContainer>
           <Link to="/">
             <Button>
               Retake Test!
             </Button>
           </Link>
-          
           <Link to="/improvements">
             <Button>
               Improve Your Score!
             </Button>
           </Link>
           </ButtonContainer>
-          </div>
-    </div>
+   </>
   )
 }
 
@@ -128,7 +123,6 @@ const ButtonContainer = styled.div`
     padding-right: 150px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     align-content: space-between;
 `
 
