@@ -25,7 +25,7 @@ const UserContainer = ({users}) => {
 
   const userNames = users.map((user)=> {
     return (
-      user.FirstName
+      user.firstName
     )
   })
 

@@ -3,7 +3,7 @@ db.dropDatabase();
 
 db.app_users.insertMany([
     {
-        FirstName: "Andy",
+        firstName: "Andy",
         LastName: "Johnston",
         Transport: 4,
         Food: 3,
@@ -34,7 +34,7 @@ db.app_users.insertMany([
         FinalScore: 283
     },
     {
-        FirstName: "Hideo",
+        firstName: "Hideo",
         LastName: "Kojima",
         Transport: 3,
         Food: 2,
@@ -52,13 +52,13 @@ db.app_users.insertMany([
         SouthAmerica: "No",
         Oceania: "No",
         Africa: "No",
-        TransportScore: 88,
-        FoodScore: 0,
-        TravelScore: 1550,
+        transportScore: 88,
+        foodScore: 0,
+        travelScore: 1550,
         FinalScore: 1638
     },
     {
-        FirstName: "Bill",
+        firstName: "Bill",
         LastName: "Hill",
         Transport: 2,
         Food: 2,
@@ -77,13 +77,13 @@ db.app_users.insertMany([
         Oceania: "No",
         Africa: "Yes",
         AfricaChoice: 1,
-        TransportScore: 135,
-        FoodScore: 0,
-        TravelScore: 2445,
+        transportScore: 135,
+        foodScore: 0,
+        travelScore: 2445,
         FinalScore: 3010
     },
     {
-        FirstName: "Holly",
+        firstName: "Holly",
         LastName: "MacAuley",
         Transport: 4,
         Food: 1,
@@ -96,13 +96,13 @@ db.app_users.insertMany([
         SouthAmerica: "No",
         Oceania: "No",
         Africa: "No",
-        TransportScore: 0,
-        FoodScore: 0,
-        TravelScore: 1820,
+        transportScore: 0,
+        foodScore: 0,
+        travelScore: 1820,
         FinalScore: 1820
     },
     {
-        FirstName: "Joe",
+        firstName: "Joe",
         LastName: "Badger",
         Transport: 1,
         Food: 3,
@@ -132,13 +132,13 @@ db.app_users.insertMany([
         SouthAmerica: "No",
         Oceania: "No",
         Africa: "No",
-        TransportScore: 470,
-        FoodScore: 745,
-        TravelScore: 10,
+        transportScore: 470,
+        foodScore: 745,
+        travelScore: 10,
         FinalScore: 1225
     },
     {
-        FirstName: "Lorraine",
+        firstName: "Lorraine",
         LastName: "Green",
         Transport: 2,
         Food: 1,
@@ -151,13 +151,13 @@ db.app_users.insertMany([
         SouthAmericaChoice: 1,
         Oceania: "No",
         Africa: "No",
-        TransportScore: 135,
-        FoodScore: 0,
-        TravelScore: 2850,
-        FinalScore: 2985
+        transportScore: 135,
+        foodScore: 0,
+        travelScore: 2850,
+        finalScore: 2985
     },
     {
-        FirstName: "Des",
+        firstName: "Des",
         LastName: "Brown",
         Transport: 1,
         Food: 3,
@@ -182,13 +182,13 @@ db.app_users.insertMany([
         Oceania: "Yes",
         OceaniaChoice: 1,
         Africa: "No",
-        TransportScore: 470,
-        FoodScore: 302,
-        TransportScore: 5000,
+        transportScore: 470,
+        foodScore: 302,
+        travelScore: 5000,
         FinalScore: 5772
     },
     {
-        FirstName: "Gracie",
+        firstName: "Gracie",
         LastName: "Duvall",
         Transport: 2,
         Food: 1,
@@ -201,9 +201,9 @@ db.app_users.insertMany([
         SouthAmericaChoice: 1,
         Oceania: "No",
         Africa: "No",
-        TransportScore: 12,
-        FoodScore: 239,
-        TravelScore: 322,
+        transportScore: 12,
+        foodScore: 239,
+        travelScore: 322,
         FinalScore: 831.5
     }
 ])
