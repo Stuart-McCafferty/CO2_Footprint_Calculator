@@ -7,6 +7,11 @@ import HighchartsReact from 'highcharts-react-official';
 import styled from 'styled-components';
 
 const UserContainer = ({users}) => {
+  
+  // function refreshPage() {
+  //   window.location.reload(false);
+  // }
+
     const transportTotal = users.map((user)=> {
         return (
           user.transportScore
@@ -68,12 +73,18 @@ const UserContainer = ({users}) => {
     };
     
   return (
+
     <>
             <HeaderContainer>
             <H1>USER SCORES</H1>
             <Para>See how your score compares to other users in your area!</Para>
             </HeaderContainer>
             <GraphContainer>
+
+    <div>
+      <button>See how you compare</button>
+          <div>
+
           <HighchartsReact
             highcharts={Highcharts}
             options={options}

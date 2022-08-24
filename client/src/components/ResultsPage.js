@@ -174,10 +174,10 @@ export const ResultsPage = ({surveyResults}) => {
         user = "Climate Thug"
         introText = "Uh oh"
     } else if(counter >= climateCitizen && counter < climateThug){
-        user = "Climate Citizen!"
+        user = "Climate Citizen"
         introText = "Well done"
     } else {
-        user = "Climate Hero!"
+        user = "Climate Hero"
         introText = "Congratulations"
     }
 
@@ -211,7 +211,6 @@ export const ResultsPage = ({surveyResults}) => {
                     See how your score compares to other users!
                 </button>
             </Link>
-
         </div>
         </>
         
@@ -228,10 +227,18 @@ const TotalScore = styled.h2`
     font-size: 24px;
     font-weight: bold;
 `
+
 // const Button = styled.button`
 //     background-color: #1AB394;
 //     color: white; 
 //     border-radius: 5px;
 //     padding: 5px;
 // `
+
+const Button = styled.button`
+    background-color: #1AB394;
+    color: white; 
+    border-radius: 5px;
+    padding: 5px;
+`
 
