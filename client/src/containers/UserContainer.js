@@ -1,6 +1,4 @@
 import React from 'react';
-import UserTable from '../components/UserTable';
-import { render } from 'react-dom';
 import { Link } from "react-router-dom";
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';

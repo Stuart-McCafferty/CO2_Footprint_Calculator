@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {useLocation} from 'react-router-dom';
+import styled from 'styled-components';
+import './containersCss.css'
+
+
 const ImprovementContainer = () => {
     //get resultsMap
     const location = useLocation();
@@ -215,18 +219,20 @@ const ImprovementContainer = () => {
         if (transportCounter > 87){
             return (
                 <>
-                <p>Oh no...Your mode of transport is the {transportPicked}, this releases {transportCounter} kg of CO² per year</p>
-                <p>You could decrease your CO2 emissions by Walking or Cycling</p>
-                <button onClick={handleClick(0)}>Walking/Cycling</button>
-                <button onClick={handleClick(88)}>Train</button>
-                <button onClick={handleClick(135)}>Bus</button>
-                <button onClick={handleClick(470)}>Car</button>
+                <Text>Oh no...Your mode of transport is the {transportPicked}, this releases {transportCounter} kg of CO² per year</Text>
+                <TextSml>You could decrease your CO2 emissions by Walking or Cycling</TextSml>
+                <ButtonContainer>
+                    <button onClick={handleClick(0)}>Walking/Cycling</button>
+                    <button onClick={handleClick(88)}>Train</button>
+                    <button onClick={handleClick(135)}>Bus</button>
+                    <button onClick={handleClick(470)}>Car</button>
+                </ButtonContainer>
                 </>
                 )
         } else {
             <>
-            <p>WOW, You are a climate hero!</p>
-            <p>Walking is the best mode of transport, it produces no CO2 emissions!</p>
+            <Text>WOW, You are a climate hero!</Text>
+            <TextSml>Walking is the best mode of transport, it produces no CO2 emissions!</TextSml>
             </>
         }
     }
@@ -243,10 +249,8 @@ const ImprovementContainer = () => {
     const foodNodes = foodList.map((food, i) => {
         return (
             <>
-            <div>
             <h3>Will you stop eating {food}?</h3>
             <button id={i} onClick={handleFoodClickYes(i)}>Yes!</button> 
-            </div>
             </>
 
         )
@@ -257,8 +261,8 @@ const ImprovementContainer = () => {
 
             return (
                 <>
-                <p>WOW, You are a vegan! Good for you pal</p>
-                <p>That is sooo good for the environment</p>
+                <Text>WOW, You are a vegan! Good for you pal</Text>
+                <TextSml>That is sooo good for the environment</TextSml>
                 </>
             )
         } else {
@@ -285,10 +289,8 @@ const ImprovementContainer = () => {
 const travelNodes = travelList.map((travel, i) => {
     return (
         <>
-        <div>
-        <h3>Will you reduce your travelling to {travel}?</h3>
+        <TextSml>Will you reduce your travelling to {travel}?</TextSml>
         <button id={i} onClick={handleFoodClickYesTravel(i)}>Yes!</button> 
-        </div>
         </>
 
     )
@@ -299,9 +301,9 @@ function travel(){
 
         return (
             <>
-            <p>You have zero CO2 emissions for travel!</p>
-            <p>Good for you pal</p>
-            <p>That is sooo good for the environment</p>
+            <Text>You have zero CO2 emissions for travel!</Text>
+            <TextSml>Good for you pal</TextSml>
+            <TextSml>That is sooo good for the environment</TextSml>
             </>
         )
     } else {
@@ -314,21 +316,55 @@ function travel(){
 }
 
 
+let totalChange = transportChange + foodChange + transportChange
 
 
 
     return (
         <>
-        <h1>Promised change total: {transportChange} + {foodChange} + {travelChange} kg of CO² per year</h1>
-        <hr/>
-        <h2>Transport - Promised change to transport: {transportChange} kg of CO² per year</h2>
+
+        <ImprovementPageContainer>
+        <PageTitle>DO YOU WANNA BE A HERO OR A THUG?</PageTitle>
+        <Text>Find out how a few small adjustments to your lifestyle could reduce your carbon footprint! </Text>
+
+      <ImageConatiner>
+        <ImageBoxRed>
+            <img src={require('./NMafiaBoss.jpeg')} height={250} width={250} />
+            <CharacterName>Climate Mafia Boss</CharacterName>
+            <ScoreRange>5000 kg +</ScoreRange>
+        </ImageBoxRed>
+        <ImageBoxRed>
+            <img src={require('./NClimateThug.png')} height={250} width={250} /> 
+            <CharacterName>Climate Thug</CharacterName>
+            <ScoreRange>3000 kg +</ScoreRange>
+        </ImageBoxRed>
+        <ImageBoxRed>
+            <img src={require('./Ncitizen.png')} height={250} width={250} /> 
+            <CharacterName>Climate Citizen</CharacterName>
+            <ScoreRange>1000 kg +</ScoreRange>
+        </ImageBoxRed>
+        <ImageBoxRed>
+            <img src={require('./NClimateHero.png')} height={250} width={250} /> 
+            <CharacterName>Climate Hero</CharacterName>
+            <ScoreRange>1 kg +</ScoreRange>
+        </ImageBoxRed> 
+        </ImageConatiner> 
+        <BigScoreRange>Total Improvment Calculator</BigScoreRange>
+        <TotalScoreContainer>
+            <PageTitle>{totalChange} kg of CO² per year</PageTitle>
+        </TotalScoreContainer> 
+        <Text>See how changing your habits could improve your score by changing the variables below.</Text>
+        <CalculatorContainer>
+        <h2>Transport improvement calculator: {transportChange} kg of CO² per year</h2>
         {{transportCounter} ? transport() : null}
-        <hr/>
-        <h2>Food - Promised change to transport: {foodChange} kg of CO² per year</h2>
+        <DivSpacer/>
+        <h2>Food improvement calculator: {foodChange} kg of CO² per year</h2>
         {food()}
-        <hr/>
-        <h2>Travel - Promised change to transport: {travelChange} kg of CO² per year</h2>
+        <DivSpacer/>
+        <h2>Travel improvement calculator: {travelChange} kg of CO² per year</h2>
         {travel()}
+        </CalculatorContainer>
+        </ImprovementPageContainer>
         </>
         
 
@@ -336,3 +372,109 @@ function travel(){
 }
 
 export default ImprovementContainer
+
+const ImprovementPageContainer = styled.main`
+    background-color: #F9F5F0 ;
+    padding: 10vh;
+
+`
+
+const ImageConatiner = styled.div`
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3vh;
+
+`
+
+const ImageBoxRed = styled.div`
+    border-radius: 10px;
+    background-color: white;
+    border: 3px solid;
+
+`
+const CharacterName = styled.h2`
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 2px;
+    
+    
+`
+const Text = styled.p`
+    font-family: 'Karla', sans-serif;
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 2px;
+    
+    
+`
+const TextSml = styled.p`
+    font-family: 'Karla', sans-serif;
+    font-size: 2.5vh;
+    font-weight: bold;
+    text-align: center;
+    margin-block-start: 3vh;
+    margin-block-end: 1vh;
+    
+    
+`
+const BigScoreRange = styled.h2`
+    font-family: 'Rubik Dirt';
+    font-size: 25px;
+    text-align: center;
+    margin-block-start: 5vh;
+    margin-inline-end: 5px;
+`
+const ScoreRange = styled.h2`
+    font-family: 'Rubik Dirt';
+    font-size: 20px;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-inline-end: 5px;
+`
+const PageTitle = styled.h1`
+    font-family: 'Rubik Dirt';
+    font-size: 4vh;
+    text-align: center;
+    margin-block-start: 1vh;
+    margin-block-end: 1vh;
+`
+const TotalScoreContainer = styled.div`
+    background-color: #0A1128;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 2.5vw;
+    color: white;
+    border-radius: 10px;
+    padding: 1vh;
+
+`
+const CalculatorContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 3vh;
+    border: 1px solid #F7EDE2;
+    box-shadow: 5px 5px 5px 5px #0F6B59 ;
+    padding: 8vh;
+`
+
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+`
+
+const DivSpacer = styled.div`
+    background-color: #0A1128;
+    width: 30vw;
+    border-radius: 10px;
+    height: .5vh;
+    margin: 7vh;
+`

@@ -1,14 +1,9 @@
 import { useCallback, useState, useRef } from 'react';
-
-// import './App.css'
-
 import 'survey-core/modern.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { ResultsPage } from '../components/ResultsPage';
-import { postUser } from "../components/QuizService"
-
-
+// import './App.css'
 
 StylesManager.applyTheme("modern");
 
