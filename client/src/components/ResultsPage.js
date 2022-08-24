@@ -179,8 +179,13 @@ export const ResultsPage = ({surveyResults}) => {
 
             <Link to= "/improvements" state={ resultsMap }>
                 <Button>             
-                    <button>Find out how to reduce you're footprint here!</button>
+                    Find out how to reduce you're footprint here!
                 </Button>  
+            </Link>
+            <Link to= "/table">
+                <Button>
+                    See how your score compares to other users!
+                </Button>
             </Link>
         </div>
         </>

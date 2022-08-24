@@ -7,7 +7,7 @@ export const HomePage = () => {
     <HomepageContainer>
     <HeaderContainer>
       <H1>CHALLENGE YOURSELF TO MAKE A DIFFERENCE</H1>
-      <Para>The Climate Crisis is here, what are you going to do about it?x</Para>
+      <Para>The Climate Crisis is here, what are you going to do about it?</Para>
     </HeaderContainer>
     <BodyContainer>
       <SurveyContainer>
