@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import './NavBarCSS.css'
 const NavBar = () => {
 
 return (
@@ -12,12 +12,19 @@ return (
         <NavLinks>
           <Link to="/" style={linkStyle}><LinkStyle>Quiz</LinkStyle></Link>
           <Link to="/table" style={linkStyle}><LinkStyle>Table</LinkStyle></Link>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+          <div>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          </div>
         </NavLinks>
+        
     </NavBarContainer>
 );
 }
 
 export default NavBar;
+
 
 const linkStyle = {
   "font-size": "30px",
@@ -55,6 +62,9 @@ const NavLinks = styled.ul`
   display: flex;
   list-style-type: none;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
 
 
 `
