@@ -205,8 +205,12 @@ export const ResultsPage = ({surveyResults}) => {
                     Find out how to reduce you're footprint here!
                 </Button>  
             </Link>
-            
 
+            <Link to= "/table">
+                <Button>
+                    See how your score compares to other users!
+                </Button>
+            </Link>
         </div>
         </>
         
