@@ -8,7 +8,9 @@ return (
 
     <NavBarContainer>
         <SiteHeading>CO2 CALCULATOR</SiteHeading>
-          {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
+        {/* <ImageContainer>
+          <img src={require('./HeroCeros.png')}  height={200} width={200} />
+        </ImageContainer> */}
         <NavLinks>
           <Link to="/" style={linkStyle}><LinkStyle>Quiz</LinkStyle></Link>
           <Link to="/table" style={linkStyle}><LinkStyle>Table</LinkStyle></Link>
@@ -25,6 +27,11 @@ return (
 
 export default NavBar;
 
+const ImageContainer = styled.div`
+  position: absolute;
+  position-
+
+`
 
 const linkStyle = {
   "font-size": "30px",
