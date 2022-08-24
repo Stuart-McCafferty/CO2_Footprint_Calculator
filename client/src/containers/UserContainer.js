@@ -42,7 +42,7 @@ const UserContainer = ({users}) => {
     yAxis: {
         min: 0,
         title: {
-            text: 'Co2 emissions'
+            text: 'Co2 emissions in kgs'
         }
     },
     legend: {
@@ -67,7 +67,6 @@ const UserContainer = ({users}) => {
     
   return (
     <div>
-        <h1>User Table</h1>
           <div>
           <HighchartsReact
             highcharts={Highcharts}
