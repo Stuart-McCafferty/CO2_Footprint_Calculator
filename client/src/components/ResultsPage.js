@@ -129,11 +129,10 @@ export const ResultsPage = ({surveyResults}) => {
     }
 
     postUser({
-        FirstName : resultsMap.get('FirstName'),
-        LastName : resultsMap.get('LastName'),
-        TransportScore : transportCounter,
-        FoodScore : foodCounter,
-        TravelScore : travelCounter
+        firstName : resultsMap.get('FirstName'),
+        transportScore : transportCounter,
+        foodScore : foodCounter,
+        travelScore : travelCounter
     });
 
 
@@ -200,7 +199,7 @@ const TotalScore = styled.h2`
     font-weight: bold;
 `
 const Button = styled.button`
-    background-colour : #1AB394;
+    background-color: #1AB394;
     color: white; 
     border-radius: 5px;
     padding: 5px;
