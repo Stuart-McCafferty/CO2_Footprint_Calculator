@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import { postUser } from './QuizService';
 
 
 export const ResultsPage = ({surveyResults}) => {
+
+    // const [transportTotal, setTransportTotal] = useState('')
+    // const [foodTotal, setFoodTotal] = useState('')
+    // const [travelTotal, setTravelTotal] = useState('')
+
 
     let counter = 0;
     let transportCounter = 0;
@@ -12,6 +18,10 @@ export const ResultsPage = ({surveyResults}) => {
     const results = JSON.parse(surveyResults)
     const resultsMap = new Map(Object.entries(results));
     console.log(resultsMap)
+
+    
+    // strigafy transport counter etc what do they return??
+    // do we need to send back all the info? All objects don't need to be the same.
 
     //COUNTER CALCS - YOU ARE ENTERING HELLS DEN
 
@@ -117,6 +127,15 @@ export const ResultsPage = ({surveyResults}) => {
         counter += resultsMap.get('AfricaChoice') * 2290
         travelCounter += resultsMap.get('AfricaChoice') * 2290
     }
+
+    postUser({
+        FirstName : resultsMap.get('FirstName'),
+        LastName : resultsMap.get('LastName'),
+        TransportScore : transportCounter,
+        FoodScore : foodCounter,
+        TravelScore : travelCounter
+    });
+
 
     console.log(counter)
     const climateMafiaBoss = 5000;

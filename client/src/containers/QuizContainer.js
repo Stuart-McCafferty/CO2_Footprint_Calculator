@@ -6,6 +6,7 @@ import 'survey-core/modern.min.css';
 import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { ResultsPage } from '../components/ResultsPage';
+import { postUser } from "../components/QuizService"
 
 
 
@@ -409,6 +410,7 @@ function QuizContainer() {
   }, []);
 
   survey.onComplete.add(displayResults);
+
 
   // surveyJson.showProgressBar = 'bottom';
   // ReactDOM.render (<SurveyReact.Survey model={survey}/>, document.getElementById("surveyElement"));

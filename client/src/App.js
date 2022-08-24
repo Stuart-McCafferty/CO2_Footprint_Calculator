@@ -22,7 +22,7 @@ import { HomePage } from "./components/HomePage";
 
 
 function App(){
-  const [values, setValues] = useState([]);
+  // const [values, setValues] = useState([]);
   const [users, setUsers] = useState([]);
 
   // useEffect(() => {
