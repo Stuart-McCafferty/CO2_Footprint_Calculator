@@ -135,6 +135,7 @@ const Button = styled.button`
     padding: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
 `
 
 const GraphContainer = styled.div`
