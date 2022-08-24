@@ -201,15 +201,15 @@ export const ResultsPage = ({surveyResults}) => {
 
 
             <Link to= "/improvements" state={ resultsMap }>
-                <Button>             
+                <button>             
                     Find out how to reduce you're footprint here!
-                </Button>  
+                </button>  
             </Link>
 
             <Link to= "/table">
-                <Button>
+                <button>
                     See how your score compares to other users!
-                </Button>
+                </button>
             </Link>
         </div>
         </>
@@ -227,9 +227,18 @@ const TotalScore = styled.h2`
     font-size: 24px;
     font-weight: bold;
 `
+
+// const Button = styled.button`
+//     background-color: #1AB394;
+//     color: white; 
+//     border-radius: 5px;
+//     padding: 5px;
+// `
+
 const Button = styled.button`
     background-color: #1AB394;
     color: white; 
     border-radius: 5px;
     padding: 5px;
 `
+

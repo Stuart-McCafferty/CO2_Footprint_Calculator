@@ -57,7 +57,7 @@ function App(){
 <NavBar/>
   <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/table" element={<UserContainer users={users}/>}/>
+      <Route path="/table" element={<UserContainer users={users} />}/>
       <Route path="/improvements" element={<ImprovementContainer />}/>
   </Routes>
 </Router>
