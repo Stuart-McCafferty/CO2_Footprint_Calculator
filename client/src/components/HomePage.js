@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import QuizContainer from '../containers/QuizContainer'
+import { Link } from 'react-router-dom'
 
 export const HomePage = () => {
   return (
@@ -14,7 +15,6 @@ export const HomePage = () => {
         <QuizContainer/>
       </SurveyContainer>
     </BodyContainer>
-
     </HomepageContainer>
   )
 }
