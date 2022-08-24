@@ -80,11 +80,6 @@ const UserContainer = ({users}) => {
             <Para>See how your score compares to other users in your area!</Para>
             </HeaderContainer>
             <GraphContainer>
-
-    <div>
-      <button>See how you compare</button>
-          <div>
-
           <HighchartsReact
             highcharts={Highcharts}
             options={options}
@@ -102,7 +97,7 @@ const UserContainer = ({users}) => {
             </Button>
           </Link>
           </ButtonContainer>
-   </>
+          </>
   )
 }
 
