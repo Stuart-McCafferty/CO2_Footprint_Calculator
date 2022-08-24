@@ -196,9 +196,9 @@ export const ResultsPage = ({surveyResults}) => {
             {user === "Climate Citizen" ? <img src={require('./Citizen.jpg')} height={300} width={300} />: null}
             {user === "Climate Hero" ? <img src={require('./Climatehero.jpg')}  height={300} width={300} /> : null}
 
-            <Breakdown>Your Transport CO2 is: {transportCounter} kg of CO² per year
+            Your Transport CO2 is: {transportCounter} kg of CO² per year
             <p>Your Food CO2 is: {foodCounter} kg of CO² per year</p>
-            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p></Breakdown>
+            <p>Your Travel CO2 is: {travelCounter } kg of CO² per year</p>
 
 
             <Link to= "/improvements" state={ resultsMap }>
@@ -236,7 +236,7 @@ const TotalScore = styled.h2`
 `
 const Intro = styled.h4`
     text-align: center;
-
+`
 
 const Button = styled.button`
     background-color: #1AB394;
