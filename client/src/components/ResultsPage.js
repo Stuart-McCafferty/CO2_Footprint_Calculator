@@ -202,7 +202,7 @@ export const ResultsPage = ({surveyResults}) => {
 
             <Link to= "/improvements" state={ resultsMap }>
                 <Button>             
-                    <button>Find out how to reduce you're footprint here!</button>
+                    Find out how to reduce you're footprint here!
                 </Button>  
             </Link>
             
