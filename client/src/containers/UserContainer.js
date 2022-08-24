@@ -8,9 +8,9 @@ import styled from 'styled-components';
 
 const UserContainer = ({users}) => {
   
-  // function refreshPage() {
-  //   window.location.reload(false);
-  // }
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
     const transportTotal = users.map((user)=> {
         return (
@@ -97,6 +97,7 @@ const UserContainer = ({users}) => {
             </Button>
           </Link>
           </ButtonContainer>
+          <button onClick = {refreshPage}>See how you compare to other users</button>
           </>
   )
 }
