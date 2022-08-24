@@ -13,7 +13,7 @@ const createRouter = require('./helpers/create_router.js');
 MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
 .then((client) => {
     const db = client.db('co2_app_users');
-    const users = db.collection('users');
+    const users = db.collection('app_users');
     const usersRouter = createRouter(users);
     app.use('/api/users', usersRouter);
 });

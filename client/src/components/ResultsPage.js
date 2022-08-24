@@ -21,11 +21,6 @@ export const ResultsPage = ({surveyResults}) => {
     
     // strigafy transport counter etc what do they return??
     // do we need to send back all the info? All objects don't need to be the same.
-    postUser({
-        FirstName : resultsMap.get('FirstName'),
-        LastName : resultsMap.get('LastName'),
-    })
-
 
     //COUNTER CALCS - YOU ARE ENTERING HELLS DEN
 
@@ -131,6 +126,15 @@ export const ResultsPage = ({surveyResults}) => {
         counter += resultsMap.get('AfricaChoice') * 2290
         travelCounter += resultsMap.get('AfricaChoice') * 2990
     }
+
+    postUser({
+        FirstName : resultsMap.get('FirstName'),
+        LastName : resultsMap.get('LastName'),
+        TransportScore : transportCounter,
+        FoodScore : foodCounter,
+        TravelScore : travelCounter
+    });
+
 
     console.log(counter)
     const climateMafiaBoss = 5000;
