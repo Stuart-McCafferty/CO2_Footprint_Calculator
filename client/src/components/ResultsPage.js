@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import ImprovementContainer from '../containers/ImprovementContainer';
 import { postUser } from './QuizService';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 
 export const ResultsPage = ({surveyResults}) => {
@@ -53,6 +55,26 @@ export const ResultsPage = ({surveyResults}) => {
         console.log(3)
         counter += resultsMap.get('EggChoice') * 22
         foodCounter += resultsMap.get('EggChoice') * 22
+    }
+    // Cheese2
+    if (resultsMap.get('CheeseChoice2')){
+        counter += resultsMap.get('CheeseChoice2') * 102
+        console.log(1)
+        foodCounter += resultsMap.get('CheeseChoice2') * 102
+        
+    }
+    // Milk2
+    if (resultsMap.get('MilkChoice2')){
+        console.log(2)
+        counter += resultsMap.get('MilkChoice2') * 12
+        foodCounter += resultsMap.get('MilkChoice2') * 12
+
+    }
+    // Egg2
+    if (resultsMap.get('EggChoice2')){
+        console.log(3)
+        counter += resultsMap.get('EggChoice2') * 22
+        foodCounter += resultsMap.get('EggChoice2') * 22
     }
     // Beef
     if (resultsMap.get('Beef Choice')){
@@ -161,6 +183,7 @@ export const ResultsPage = ({surveyResults}) => {
 
     console.log(surveyResults)
 
+
     return (
         <>
         <div>
@@ -182,6 +205,9 @@ export const ResultsPage = ({surveyResults}) => {
                     <button>Find out how to reduce you're footprint here!</button>
                 </Button>  
             </Link>
+            
+
+            
         </div>
         </>
         

@@ -136,7 +136,7 @@ const surveyJson = {
         ],
       },
       {
-        name: "CheeseChoice",
+        name: "CheeseChoice2",
         title: "How many portions of cheese do you eat per week?",
         type: "rating",
         isRequired: true,
@@ -153,7 +153,7 @@ const surveyJson = {
         ],
       },
       {
-        name: "MilkChoice",
+        name: "MilkChoice2",
         title: "How much milk do you drink?",
         type: "rating",
         isRequired: true,
@@ -170,7 +170,7 @@ const surveyJson = {
         ],
       },
       {
-        name: "EggChoice",
+        name: "EggChoice2",
         title: "How many eggs do you eat in a week?",
         type: "rating",
         isRequired: true,
