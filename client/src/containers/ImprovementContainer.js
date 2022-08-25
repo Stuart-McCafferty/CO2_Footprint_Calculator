@@ -364,6 +364,10 @@ let totalChange = transportChange + foodChange + travelChange
         <h2>Travel improvement calculator: {travelChange} kg of CO² per year</h2>
         {travel()}
         </CalculatorContainer>
+        <NewUserContainer>
+            <h2>See the score of other people in your area</h2>
+            <button to="/table">Score Board</button>
+        </NewUserContainer>
         </ImprovementPageContainer>
         </>
         
@@ -477,4 +481,10 @@ const DivSpacer = styled.div`
     border-radius: 10px;
     height: .5vh;
     margin: 7vh;
+`
+const NewUserContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh;
 `
