@@ -487,4 +487,5 @@ const NewUserContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 5vh;
+
 `

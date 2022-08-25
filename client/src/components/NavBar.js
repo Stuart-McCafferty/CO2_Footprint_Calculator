@@ -7,7 +7,7 @@ const NavBar = () => {
 return (
 
     <NavBarContainer>
-        <SiteHeading>CO2 CALCULATOR</SiteHeading>
+        <SiteHeading>ECO WARRIORS</SiteHeading>
         {/* <ImageContainer>
           <img src={require('./HeroCeros.png')}  height={200} width={200} />
         </ImageContainer> */}
